@@ -51,32 +51,75 @@ cosa ha visto e cosa ha scartato.
 
 ## Setup
 
-### 1. Secrets del repo
+Quattro secrets, tutti da rifare allo stesso modo se un giorno riparti da zero
+o sposti il progetto altrove.
 
-`Settings → Secrets and variables → Actions → New repository secret`:
+### 1. Dove vanno
 
-| Secret | Cos'e' |
-| --- | --- |
-| `CLAUDE_CODE_OAUTH_TOKEN` | output di `claude setup-token` (serve un abbonamento Claude; il token viene stampato e non salvato) |
-| `GMAIL_USER` | l'indirizzo Gmail che manda la mail |
-| `GMAIL_APP_PASSWORD` | app password Google, **non** la password dell'account |
-| `MAIL_DESTINATARIO` | dove arriva la mail (se manca, arriva al mittente) |
+[`Settings → Secrets and variables → Actions`](https://github.com/limonequantistico/news/settings/secrets/actions)
+→ **New repository secret** (il bottone verde in basso).
 
-`GITHUB_TOKEN` non va creato: lo fornisce Actions da solo.
+Sono **Repository secrets**, non *Environment secrets*: quelli servono quando
+hai piu' ambienti con valori diversi e richiedono che il job dichiari
+`environment:`, cosa che questo workflow non fa — non li vedrebbe nemmeno.
 
-### 2. App password Gmail
+| Secret | Valore | Dove si recupera |
+| --- | --- | --- |
+| `CLAUDE_CODE_OAUTH_TOKEN` | `sk-ant-oat01-…` | `claude setup-token` (vedi sotto) |
+| `GMAIL_USER` | l'indirizzo Gmail mittente | e' il tuo |
+| `GMAIL_APP_PASSWORD` | 16 caratteri | [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords) |
+| `MAIL_DESTINATARIO` | dove arriva la mail | lo stesso indirizzo del mittente |
 
-Serve la verifica in due passaggi attiva sull'account. Poi
-[myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords),
-crei una password per "Settimanale" e incolli le 16 lettere nel secret (gli
-spazi non contano). Mittente e destinatario sono entrambi tuoi, quindi la mail
-non passa da nessun servizio esterno e non finisce in spam.
+`GITHUB_TOKEN` non va creato: lo fornisce Actions da solo, e GitHub non
+lascerebbe comunque usare quel nome.
 
-### 3. Prima prova
+### 2. Il token di Claude
 
-`Actions → Sintesi settimanale → Run workflow`. Lasciando `invia` a `true` la
-mail arriva davvero; mettendolo a `false` il giro si ferma prima dell'invio e
-trovi `materiale.md` e `sintesi.md` tra gli artifact della run.
+In un terminale normale, fuori da una sessione Claude Code:
+
+```sh
+claude setup-token
+```
+
+Si apre il browser sulla stessa autorizzazione di `/login`; quando approvi, il
+token viene **stampato nel terminale e non salvato da nessuna parte**. Se chiudi
+la finestra senza copiarlo, rilanci il comando e ne generi un altro.
+
+- **Dura un anno** ed e' legato al tuo abbonamento (Pro, Max, Team o Enterprise).
+- Puo' solo fare richieste al modello: niente sessioni remote, niente connettori.
+- Quando scade, il workflow fallisce e GitHub ti manda la mail di errore. Quello
+  e' il momento in cui rilanci `claude setup-token` e aggiorni il secret: e' il
+  guasto previsto, non una sorpresa.
+
+Documentazione: [Generate a long-lived token](https://code.claude.com/docs/en/authentication#generate-a-long-lived-token).
+
+### 3. L'app password di Gmail
+
+Non e' la password dell'account: Google ha chiuso l'accesso SMTP con quella nel
+2022 e risponderebbe con un errore di autenticazione. Serve una *app password*,
+valida solo per SMTP, che non da' accesso alla casella e si revoca da sola.
+
+1. Verifica in due passaggi **attiva** sull'account, altrimenti la pagina delle
+   app password non esiste proprio — e' il motivo piu' comune per cui non si
+   trova.
+2. [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords),
+   dai un nome ("Settimanale") e crea.
+3. Copia i 16 caratteri nel secret. Google li mostra a gruppi di quattro: gli
+   spazi non danno fastidio, `invia.py` li toglie.
+
+Per spegnere tutto senza toccare l'account, revochi la app password da quella
+stessa pagina. Mittente e destinatario sono entrambi tuoi, quindi la mail non
+passa da nessun servizio esterno e non finisce in spam.
+
+### 4. Prima prova
+
+[`Actions → Sintesi settimanale → Run workflow`](https://github.com/limonequantistico/news/actions/workflows/settimanale.yml).
+Con `invia: true` la mail arriva davvero; con `invia: false` il giro si ferma
+prima dell'invio e trovi `materiale.md` e `sintesi.md` tra gli artifact della
+run — utile per vedere cosa avrebbe scritto prima di riceverlo in casella.
+
+Nota: GitHub esegue i workflow schedulati **solo dal branch di default**, quindi
+le modifiche al cron contano solo una volta arrivate in `main`.
 
 ## Cambiare sintetizzatore
 
