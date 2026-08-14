@@ -30,6 +30,9 @@ import markdown
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 465
 
+# Come si presenta la mail: nome del mittente e apertura dell'oggetto.
+NOME = "News Settimanali"
+
 MESI = [
     "gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
     "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre",
@@ -75,8 +78,8 @@ def conta_voci(testo: str) -> int:
 def oggetto(testo: str, quando: datetime) -> str:
     voci = conta_voci(testo)
     if voci == 0:
-        return f"Settimanale, {data_italiana(quando)} — niente di rilevante"
-    return f"Settimanale, {data_italiana(quando)} — {voci} {'voce' if voci == 1 else 'voci'}"
+        return f"{NOME}, {data_italiana(quando)} — niente di rilevante"
+    return f"{NOME}, {data_italiana(quando)} — {voci} {'voce' if voci == 1 else 'voci'}"
 
 
 def costruisci_html(testo: str, quando: datetime, repo_url: str | None) -> str:
@@ -116,7 +119,7 @@ def segna_inviati(stato: dict, candidati: list[dict], sintesi: str, quando: date
 def manda(oggetto_mail: str, testo: str, html: str, mittente: str, destinatario: str, password: str) -> None:
     messaggio = EmailMessage()
     messaggio["Subject"] = oggetto_mail
-    messaggio["From"] = f"Settimanale <{mittente}>"
+    messaggio["From"] = f"{NOME} <{mittente}>"
     messaggio["To"] = destinatario
     messaggio.set_content(testo)
     messaggio.add_alternative(html, subtype="html")
