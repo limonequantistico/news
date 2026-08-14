@@ -128,8 +128,8 @@ dietro un'interfaccia stupida: file in, file out. `prompt.md` e' lo stesso per
 entrambi. In `sintetizza.sh`:
 
 ```sh
-claude) cat "$PROMPT" "$MATERIALE" | claude -p  > "$SINTESI" ;;
-codex)  cat "$PROMPT" "$MATERIALE" | codex exec > "$SINTESI" ;;
+claude) cat "$PROMPT" "$MATERIALE" | claude -p  > "$GREZZO" || esito=$? ;;
+codex)  cat "$PROMPT" "$MATERIALE" | codex exec > "$GREZZO" || esito=$? ;;
 ```
 
 Per passare a Codex: cambi `SUMMARIZER: claude` in `SUMMARIZER: codex` nel
@@ -158,6 +158,16 @@ cron nel file**, quindi tieni quella riga tua. Casi previsti: token Claude
 scaduto, app password revocata, fonte irraggiungibile (se una sola fonte cade
 il giro continua e il buco e' scritto in cima a `materiale.md`; se cadono
 tutte, il giro fallisce apposta).
+
+**Dove leggere l'errore.** `claude` scrive i suoi messaggi di errore su stdout,
+non su stderr. Per questo `sintetizza.sh` non scrive mai dritto sul file finale:
+manda l'output in un file di appoggio e lo promuove a `sintesi.md` solo se il
+comando esce bene, altrimenti riversa nel log quello che ha scritto. Senza
+questo accorgimento un guasto di autenticazione finisce dentro `sintesi.md` e
+il passo fallisce senza una riga di spiegazione nel log — successo davvero, con
+un token incollato spezzato su due righe (il terminale lo manda a capo e la
+copia si porta dietro l'a capo). Ora lo script toglie gli spazi dal token, ma se
+ti ritrovi un passo muto, l'output vero e' negli artifact della run.
 
 Nota sui workflow schedulati: nei repo **pubblici** GitHub li disattiva dopo
 60 giorni senza attivita', e conta solo un commit nuovo sul branch di default
