@@ -1,0 +1,101 @@
+name: Sintesi settimanale
+
+on:
+  schedule:
+    # Lunedi' alle 05:00 UTC = 07:00 in Italia d'estate, 06:00 d'inverno.
+    # Il cron di Actions puo' ritardare parecchio nelle fasce di picco: qui
+    # e' irrilevante, niente dipende dall'ora esatta.
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+    inputs:
+      invia:
+        description: "Mandare davvero la mail e aggiornare lo stato"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: settimanale
+  cancel-in-progress: false
+
+jobs:
+  settimanale:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # L'unico interruttore tra un abbonamento e l'altro.
+      SUMMARIZER: claude
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Dipendenze Python
+        run: pip install -r requirements.txt
+
+      - uses: actions/setup-node@v4
+        if: env.SUMMARIZER == 'claude'
+        with:
+          node-version: "22"
+
+      - name: Installa il sintetizzatore (claude)
+        if: env.SUMMARIZER == 'claude'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Raccolta
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python raccogli.py
+
+      - name: Sintesi
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: ./sintetizza.sh
+
+      - name: Materiale e sintesi come artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: settimanale-${{ github.run_number }}
+          path: |
+            materiale.md
+            sintesi.md
+            candidati.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Invio
+        if: github.event_name == 'schedule' || inputs.invia
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MAIL_DESTINATARIO: ${{ secrets.MAIL_DESTINATARIO }}
+        run: python invia.py
+
+      # Il commit settimanale serve due volte: tiene l'archivio ispezionabile
+      # e tiene vivo il workflow schedulato (GitHub disattiva gli schedule dei
+      # repo pubblici dopo 60 giorni senza commit). Per questo l'archivio si
+      # scrive sempre, anche nelle settimane senza niente da segnalare.
+      - name: Archivia e committa
+        if: github.event_name == 'schedule' || inputs.invia
+        run: |
+          set -euo pipefail
+          giorno=$(date -u +%Y-%m-%d)
+          mkdir -p "archivio/$giorno"
+          cp materiale.md sintesi.md "archivio/$giorno/"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stato.json archivio
+          if git diff --cached --quiet; then
+            echo "niente da committare (non dovrebbe succedere)"
+          else
+            voci=$(grep -c '^### ' sintesi.md || true)
+            git commit -m "Settimanale $giorno: $voci voci"
+            git push
+          fi

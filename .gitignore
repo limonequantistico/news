@@ -1,0 +1,11 @@
+# Artefatti di un singolo giro: la copia buona finisce in archivio/.
+# Le barre iniziali sono necessarie, altrimenti l'ignore prenderebbe anche
+# le copie archiviate.
+/materiale.md
+/sintesi.md
+/candidati.json
+
+__pycache__/
+*.pyc
+.venv/
+.context/
