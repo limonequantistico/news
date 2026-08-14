@@ -156,7 +156,9 @@ def main() -> int:
         return 0
 
     mittente = os.environ.get("GMAIL_USER", "").strip()
-    password = os.environ.get("GMAIL_APP_PASSWORD", "").strip()
+    # Google mostra l'app password a gruppi di quattro: se viene incollata con
+    # gli spazi dentro, va tolti tutti, non solo quelli ai bordi.
+    password = re.sub(r"\s+", "", os.environ.get("GMAIL_APP_PASSWORD", ""))
     destinatario = os.environ.get("MAIL_DESTINATARIO", "").strip() or mittente
     if not mittente or not password:
         print("invia.py: servono GMAIL_USER e GMAIL_APP_PASSWORD", file=sys.stderr)
