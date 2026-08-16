@@ -23,17 +23,30 @@ pescando da quello che gia' sa.
 
 ### Repo GitHub
 
-Due ricerche sulla Search API ufficiale (niente scraping della pagina trending,
-che si rompe a ogni redesign), entrambe ordinate per stelle decrescenti, 50
-risultati ciascuna:
+Tre ricerche sulla Search API ufficiale (niente scraping della pagina trending,
+che si rompe a ogni redesign), tutte ordinate per stelle decrescenti, 50
+risultati ciascuna. Attenzione a come si legge `created:>data`: vuol dire
+**creata dopo quella data**, cioe' "nata negli ultimi N giorni", non "vecchia
+almeno N giorni".
 
 | Etichetta | Query | Cosa cerca |
 | --- | --- | --- |
-| `nuove` | `created:>30 giorni fa stars:>25` | repo appena nate che hanno gia' raccolto attenzione |
+| `della settimana` | `created:>7 giorni fa stars:>25` | le nate nell'ultima settimana, che corrono solo tra loro |
+| `nuove` | `created:>30 giorni fa stars:>25` | repo dell'ultimo mese che hanno gia' raccolto attenzione |
 | `in crescita` | `created:>1 anno fa pushed:>7 giorni fa stars:>500` | repo giovani, gia' affermate e ancora attive |
 
-Le due liste vengono unite e deduplicate per `owner/nome`: in pratica ~100 repo
-a giro.
+Le tre liste vengono unite e deduplicate per `owner/nome`, e chi compare in piu'
+ricerche tiene l'etichetta della prima: in pratica ~135 repo a giro.
+
+**Perche' la finestra a sette giorni non e' un doppione di quella a trenta.**
+Ogni ricerca torna solo le prime 50 per stelle **assolute**, quindi il filtro
+`stars:>25` e' quasi decorativo: la soglia d'ingresso vera e' "stare nei primi
+50". Su trenta giorni quella soglia e' finita a 1.862 stelle, e una repo di tre
+giorni non ci arriva mai, perche' compete con repo che hanno avuto dieci volte
+il tempo di accumulare. Facendo correre le nate nell'ultima settimana solo tra
+loro la soglia scende a ~344 stelle. Misurato sul giro del 14 agosto: senza
+questa passata le repo dell'ultima settimana erano 7 su 50; con la passata sono
+51 su 135.
 
 **La crescita.** Per ogni repo vista, la raccolta salva in `stato.json` lo
 snapshot delle stelle di oggi. Alla volta successiva confronta con lo snapshot
@@ -130,8 +143,10 @@ prima di concludere che "il sistema non ha visto una cosa importante".
 - **Una repo vecchia che esplode oggi e' invisibile.** L'universo osservato e'
   "creata nell'ultimo anno". Un progetto del 2019 che diventa improvvisamente
   centrale non lo pesca nessuna delle due query.
-- **Le repo piccole che crescono in fretta sfuggono**, a meno che non siano nate
-  negli ultimi 30 giorni: la seconda query parte da 500 stelle.
+- **Sotto le poche centinaia di stelle non si entra comunque.** Anche con la
+  passata settimanale il taglio e' "primi 50 per stelle", quindi una repo nata
+  ieri con 40 stelle resta fuori, per quanto buona sia. Il sistema vede cio' che
+  ha gia' raccolto un minimo di attenzione, non cio' che la merita.
 - **La finestra delle notizie e' rigida a 7 giorni, quella delle repo no.** Se un
   lunedi' il giro salta, le notizie di quella settimana sono perse per sempre; le
   repo invece si ripresentano al giro dopo.
