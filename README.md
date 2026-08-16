@@ -24,6 +24,10 @@ ha davvero guardato tutte le fonti, invece di scrivere una sintesi verosimile
 pescando da quello che gia' sa. Nella v0 il sintetizzatore non naviga il web:
 legge il materiale e basta.
 
+Per il criterio di selezione — perche' nella mail c'e' quella repo e non
+un'altra, con le query esatte, i punti ciechi noti e le manopole da girare —
+vedi **[algoritmo.md](algoritmo.md)**.
+
 ### Fonti
 
 - **GitHub**, Search API ufficiale (niente scraping della pagina trending, che
