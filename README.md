@@ -31,8 +31,10 @@ vedi **[algoritmo.md](algoritmo.md)**.
 ### Fonti
 
 - **GitHub**, Search API ufficiale (niente scraping della pagina trending, che
-  si rompe a ogni redesign): repo nate negli ultimi 30 giorni ordinate per
-  stelle, piu' repo dell'ultimo anno ancora attive. La **crescita settimanale**
+  si rompe a ogni redesign): repo nate nell'ultima settimana, repo nate negli
+  ultimi 30 giorni, piu' repo dell'ultimo anno ancora attive — tre passate
+  separate perche' le appena nate, messe a competere con quelle del mese, non
+  entrerebbero mai. La **crescita settimanale**
   si ricava confrontando le stelle con lo snapshot salvato in `stato.json` la
   settimana prima — dal secondo giro in poi e' il vero delta.
 - **Hacker News**, API di ricerca ufficiale: storie della settimana sopra i 150

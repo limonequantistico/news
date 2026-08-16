@@ -45,7 +45,9 @@ Nel dubbio, scarta. Il valore di questa email sta in quello che non contiene.
    sono vietati. Tono asciutto, da collega che ti dice la cosa e basta.
 
 Sulla crescita delle stelle: e' un indizio di attenzione, non di qualita'.
-Usala per accorgerti di una repo, non per giustificarla.
+Usala per accorgerti di una repo, non per giustificarla. E leggi le stelle in
+rapporto all'eta': una repo di tre giorni ne ha per forza molte meno di una di
+un mese, quindi non scartarla per il numero basso — guarda cosa fa.
 
 ## Formato dell'output
 

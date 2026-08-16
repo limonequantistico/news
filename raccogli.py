@@ -39,10 +39,18 @@ FEED_RSS = [
 # Hacker News: front page della settimana via API ufficiale di ricerca.
 HN_PUNTI_MINIMI = 150
 
-# Ricerche GitHub. La prima trova le repo nate di recente che sono esplose,
-# la seconda tiene sotto osservazione le repo giovani gia' affermate: e'
-# l'universo su cui calcoliamo il delta di stelle settimana su settimana.
+# Ricerche GitHub, in ordine di freschezza: chi compare in piu' ricerche tiene
+# l'etichetta della prima.
+#
+# La finestra a sette giorni non e' un doppione di quella a trenta. Ogni ricerca
+# torna solo le prime cinquanta per stelle assolute, quindi in una finestra di
+# trenta giorni una repo di tre giorni compete con repo che hanno avuto dieci
+# volte il tempo di accumulare stelle e non entra mai: la soglia d'ingresso
+# reale finisce sopra il migliaio. Facendo correre le nate nell'ultima settimana
+# solo tra loro, la soglia scende a poche centinaia e le repo appena uscite
+# hanno una possibilita'.
 RICERCHE_GITHUB = [
+    ("della settimana", "created:>{sette_giorni_fa} stars:>25"),
     ("nuove", "created:>{trenta_giorni_fa} stars:>25"),
     ("in crescita", "created:>{un_anno_fa} pushed:>{sette_giorni_fa} stars:>500"),
 ]
