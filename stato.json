@@ -10,15 +10,40 @@
       "titolo": "FareedKhan-dev/kimi-k3-in-c",
       "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c"
     },
+    "github:Graphify-Labs/graphify": {
+      "data": "2026-08-17",
+      "titolo": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify"
+    },
+    "github:antirez/h3.c": {
+      "data": "2026-08-17",
+      "titolo": "antirez/h3.c",
+      "url": "https://github.com/antirez/h3.c"
+    },
     "github:firecrawl/anydoc": {
       "data": "2026-08-14",
       "titolo": "firecrawl/anydoc",
       "url": "https://github.com/firecrawl/anydoc"
     },
+    "github:github/spec-kit": {
+      "data": "2026-08-17",
+      "titolo": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit"
+    },
+    "github:headroomlabs-ai/headroom": {
+      "data": "2026-08-17",
+      "titolo": "headroomlabs-ai/headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom"
+    },
     "github:microsoft/skill-recorder": {
       "data": "2026-08-14",
       "titolo": "microsoft/skill-recorder",
       "url": "https://github.com/microsoft/skill-recorder"
+    },
+    "github:sqliteai/warp": {
+      "data": "2026-08-17",
+      "titolo": "sqliteai/warp",
+      "url": "https://github.com/sqliteai/warp"
     },
     "github:vercel-labs/agent-browser": {
       "data": "2026-08-14",
@@ -30,10 +55,20 @@
       "titolo": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
       "url": "https://www.docker.com/products/docker-sandboxes/"
     },
+    "hn:49257876": {
+      "data": "2026-08-17",
+      "titolo": "Stealing Reasoning Traces from Proprietary LLM APIs",
+      "url": "https://stolen-thoughts.com/"
+    },
     "hn:49272832": {
       "data": "2026-08-14",
       "titolo": "Tracking down the 16-year-old WAL-reset SQLite bug",
       "url": "https://tailscale.com/blog/sqlite-wal-reset-bug"
+    },
+    "hn:49274600": {
+      "data": "2026-08-17",
+      "titolo": "DeepSeek V4 Pro 0813",
+      "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813"
     },
     "hn:49285244": {
       "data": "2026-08-14",
@@ -49,25 +84,76 @@
       "data": "2026-08-14",
       "titolo": "GLM-5.3: Frontier coding with emergent cyber capabilities",
       "url": "https://z.ai/blog/glm-5.3"
+    },
+    "rss:https://techcrunch.com/?p=3153306": {
+      "data": "2026-08-17",
+      "titolo": "SpaceX officially closes its Cursor acquisition",
+      "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/"
+    },
+    "rss:https://techcrunch.com/?p=3153310": {
+      "data": "2026-08-17",
+      "titolo": "Anthropic shares more details about how Claude’s new watermarks will work",
+      "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/"
+    },
+    "rss:https://www.theverge.com/?p=980817": {
+      "data": "2026-08-17",
+      "titolo": "OpenAI reportedly disbanded its preparedness team",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team"
     }
   },
   "stelle": {
+    "0xjohnnydev/FilzaSlop": [
+      [
+        "2026-08-17",
+        301
+      ]
+    ],
+    "0xsline/awesome-deepseek-harness": [
+      [
+        "2026-08-17",
+        642
+      ]
+    ],
+    "666ghj/MiroFish": [
+      [
+        "2026-08-17",
+        71079
+      ]
+    ],
     "Alishahryar1/free-claude-code": [
       [
         "2026-08-14",
         45493
+      ],
+      [
+        "2026-08-17",
+        45629
       ]
     ],
     "AminBlg/SimpleEnglish": [
       [
         "2026-08-14",
         2367
+      ],
+      [
+        "2026-08-17",
+        2428
+      ]
+    ],
+    "Anionex/dsh-vision-toolkit": [
+      [
+        "2026-08-17",
+        566
       ]
     ],
     "ChromeDevTools/chrome-devtools-mcp": [
       [
         "2026-08-14",
         49175
+      ],
+      [
+        "2026-08-17",
+        49272
       ]
     ],
     "ComposioHQ/awesome-claude-skills": [
@@ -80,6 +166,10 @@
       [
         "2026-08-14",
         1946
+      ],
+      [
+        "2026-08-17",
+        2099
       ]
     ],
     "DavidHDev/canvas-ui": [
@@ -88,76 +178,160 @@
         3944
       ]
     ],
+    "DeusData/codebase-memory-mcp": [
+      [
+        "2026-08-17",
+        39164
+      ]
+    ],
+    "DrHazemAli/enterprise-system-design": [
+      [
+        "2026-08-17",
+        534
+      ]
+    ],
     "Egonex-AI/Understand-Anything": [
       [
         "2026-08-14",
         79340
+      ],
+      [
+        "2026-08-17",
+        79545
+      ]
+    ],
+    "Electricitysheep/dsh-handbook": [
+      [
+        "2026-08-17",
+        393
       ]
     ],
     "FareedKhan-dev/kimi-k3-in-c": [
       [
         "2026-08-14",
         5607
+      ],
+      [
+        "2026-08-17",
+        5854
       ]
     ],
     "Graphify-Labs/graphify": [
       [
         "2026-08-14",
         106363
+      ],
+      [
+        "2026-08-17",
+        107196
       ]
     ],
     "HKUDS/CLI-Anything": [
       [
         "2026-08-14",
         47098
+      ],
+      [
+        "2026-08-17",
+        47653
       ]
     ],
     "HKUDS/nanobot": [
       [
         "2026-08-14",
         47002
+      ],
+      [
+        "2026-08-17",
+        47076
+      ]
+    ],
+    "Hisn00w/ASu-skills": [
+      [
+        "2026-08-17",
+        952
       ]
     ],
     "Hmbown/CodeWhale": [
       [
         "2026-08-14",
         40769
+      ],
+      [
+        "2026-08-17",
+        40823
       ]
     ],
     "Imbad0202/academic-research-skills": [
       [
         "2026-08-14",
         42486
+      ],
+      [
+        "2026-08-17",
+        42725
       ]
     ],
     "Jakubantalik/thinking-orbs": [
       [
         "2026-08-14",
         2438
+      ],
+      [
+        "2026-08-17",
+        2495
       ]
     ],
     "JuliusBrussee/caveman": [
       [
         "2026-08-14",
         98235
+      ],
+      [
+        "2026-08-17",
+        98575
       ]
     ],
     "KKKKhazix/human-writing": [
       [
         "2026-08-14",
         2706
+      ],
+      [
+        "2026-08-17",
+        2786
       ]
     ],
     "KeygraphHQ/shannon": [
       [
         "2026-08-14",
         46816
+      ],
+      [
+        "2026-08-17",
+        46874
+      ]
+    ],
+    "Kritt-ai/open-kritt": [
+      [
+        "2026-08-17",
+        1836
       ]
     ],
     "LaoFeng-mouse/flyingmouse-format": [
       [
         "2026-08-14",
         2955
+      ],
+      [
+        "2026-08-17",
+        3493
+      ]
+    ],
+    "Leutenegger/book-to-skill": [
+      [
+        "2026-08-17",
+        1159
       ]
     ],
     "MIgHTy-alIeN/ai-trader-bot": [
@@ -166,124 +340,270 @@
         2680
       ]
     ],
+    "MSNightmare/ShieldBreak": [
+      [
+        "2026-08-17",
+        576
+      ]
+    ],
     "MemPalace/mempalace": [
       [
         "2026-08-14",
         58372
+      ],
+      [
+        "2026-08-17",
+        58413
       ]
     ],
     "MiniMax-AI/MiniMax-H3": [
       [
         "2026-08-14",
         5901
+      ],
+      [
+        "2026-08-17",
+        6020
+      ]
+    ],
+    "MiniMax-AI/MiniMax-Music3": [
+      [
+        "2026-08-17",
+        483
       ]
     ],
     "MoonshotAI/Kimi-K3": [
       [
         "2026-08-14",
         8443
+      ],
+      [
+        "2026-08-17",
+        8483
+      ]
+    ],
+    "NanmiCoder/dsh-agent-teams": [
+      [
+        "2026-08-17",
+        443
+      ]
+    ],
+    "NousResearch/Hermes-Bot-Mode": [
+      [
+        "2026-08-17",
+        589
       ]
     ],
     "Panniantong/Agent-Reach": [
       [
         "2026-08-14",
         71725
+      ],
+      [
+        "2026-08-17",
+        72361
       ]
     ],
     "QoderAI/better-harness": [
       [
         "2026-08-14",
         1853
+      ],
+      [
+        "2026-08-17",
+        1869
       ]
     ],
     "QwenAudio/qwen-audio-agent": [
       [
         "2026-08-14",
         2134
+      ],
+      [
+        "2026-08-17",
+        2159
       ]
     ],
     "QwenLM/Qwen-MM-Plugins": [
       [
         "2026-08-14",
         2508
+      ],
+      [
+        "2026-08-17",
+        2646
+      ]
+    ],
+    "RadishXN/run-abroad": [
+      [
+        "2026-08-17",
+        401
+      ]
+    ],
+    "SMNETSTUDIO/WeChat-AI": [
+      [
+        "2026-08-17",
+        1770
       ]
     ],
     "ShawnPana/phone-harness": [
       [
         "2026-08-14",
         1760
+      ],
+      [
+        "2026-08-17",
+        1876
+      ]
+    ],
+    "SheberDavid/v4-flash-godmode-opencode-go": [
+      [
+        "2026-08-17",
+        514
+      ]
+    ],
+    "Small-tailqwq/dsh-deep-whale": [
+      [
+        "2026-08-17",
+        1141
       ]
     ],
     "Vincentwei1021/video-shotcraft": [
       [
         "2026-08-14",
         5019
+      ],
+      [
+        "2026-08-17",
+        5251
       ]
     ],
     "VoltAgent/awesome-openclaw-skills": [
       [
         "2026-08-14",
         51948
+      ],
+      [
+        "2026-08-17",
+        51987
+      ]
+    ],
+    "ZSvirt/zsvirt": [
+      [
+        "2026-08-17",
+        626
       ]
     ],
     "Zeejay0/gathered-scenes-zine-skill": [
       [
         "2026-08-14",
         3537
+      ],
+      [
+        "2026-08-17",
+        3777
       ]
     ],
     "ZhuLinsen/daily_stock_analysis": [
       [
         "2026-08-14",
         62877
+      ],
+      [
+        "2026-08-17",
+        63064
       ]
     ],
     "ZzzLc0405/photo-abstract-editorial": [
       [
         "2026-08-14",
         3708
+      ],
+      [
+        "2026-08-17",
+        3960
       ]
     ],
     "addyosmani/agent-skills": [
       [
         "2026-08-14",
         87270
+      ],
+      [
+        "2026-08-17",
+        87829
       ]
     ],
     "affaan-m/ECC": [
       [
         "2026-08-14",
         240164
+      ],
+      [
+        "2026-08-17",
+        240539
+      ]
+    ],
+    "alchaincyf/deepseek-harness-orange-book": [
+      [
+        "2026-08-17",
+        907
       ]
     ],
     "andrewyng/openworker": [
       [
         "2026-08-14",
         14504
+      ],
+      [
+        "2026-08-17",
+        14675
       ]
     ],
     "anthropics/skills": [
       [
         "2026-08-14",
         169416
+      ],
+      [
+        "2026-08-17",
+        169800
       ]
     ],
     "antirez/h3.c": [
       [
         "2026-08-14",
         1848
+      ],
+      [
+        "2026-08-17",
+        2081
       ]
     ],
     "anywhere-labs/deepseek-harness-desktop": [
       [
         "2026-08-14",
         1759
+      ],
+      [
+        "2026-08-17",
+        10020
+      ]
+    ],
+    "awesome-dsh-plugin/awesome-dsh-plugin": [
+      [
+        "2026-08-17",
+        6112
       ]
     ],
     "bashalarmistalt/decimen-optical-transfer": [
       [
         "2026-08-14",
         6025
+      ],
+      [
+        "2026-08-17",
+        6094
       ]
     ],
     "bryanthaboi/gen1recomp": [
@@ -296,18 +616,36 @@
       [
         "2026-08-14",
         48104
+      ],
+      [
+        "2026-08-17",
+        48426
+      ]
+    ],
+    "ccch1mneyyy/dsh-TUI": [
+      [
+        "2026-08-17",
+        1656
       ]
     ],
     "chuspeeism/dashi-taskboard": [
       [
         "2026-08-14",
         2164
+      ],
+      [
+        "2026-08-17",
+        2262
       ]
     ],
     "code-yeongyu/oh-my-openagent": [
       [
         "2026-08-14",
         67869
+      ],
+      [
+        "2026-08-17",
+        67974
       ]
     ],
     "colbymchenry/codegraph": [
@@ -316,28 +654,68 @@
         66433
       ]
     ],
+    "cordiverse/paper": [
+      [
+        "2026-08-17",
+        1960
+      ]
+    ],
+    "dataelement/dsh-desktop": [
+      [
+        "2026-08-17",
+        621
+      ]
+    ],
     "datawhalechina/hello-agents": [
       [
         "2026-08-14",
         72968
+      ],
+      [
+        "2026-08-17",
+        73257
+      ]
+    ],
+    "decionis/agent-safe-pipeline": [
+      [
+        "2026-08-17",
+        491
       ]
     ],
     "deepseek-ai/deepseek-harness": [
       [
         "2026-08-14",
         94881
+      ],
+      [
+        "2026-08-17",
+        138652
       ]
     ],
     "diegosouzapw/OmniRoute": [
       [
         "2026-08-14",
         47966
+      ],
+      [
+        "2026-08-17",
+        49291
       ]
     ],
     "digimata/quill": [
       [
         "2026-08-14",
         3802
+      ],
+      [
+        "2026-08-17",
+        3814
+      ]
+    ],
+    "dmmulroy/anti-slop": [
+      [
+        "2026-08-17",
+        1716
       ]
     ],
     "drumih/turbo-fieldfare": [
@@ -346,64 +724,134 @@
         5970
       ]
     ],
+    "dsh-market/dsh-market": [
+      [
+        "2026-08-17",
+        662
+      ]
+    ],
     "duolahypercho/codex-router": [
       [
         "2026-08-14",
         2223
+      ],
+      [
+        "2026-08-17",
+        2381
+      ]
+    ],
+    "elie222/rakazo": [
+      [
+        "2026-08-17",
+        572
       ]
     ],
     "firecrawl/anydoc": [
       [
         "2026-08-14",
         16082
+      ],
+      [
+        "2026-08-17",
+        16505
+      ]
+    ],
+    "frs0n/GestaltEdit": [
+      [
+        "2026-08-17",
+        419
       ]
     ],
     "garrytan/gstack": [
       [
         "2026-08-14",
         128048
+      ],
+      [
+        "2026-08-17",
+        128297
       ]
     ],
     "genspark-ai/genoffice": [
       [
         "2026-08-14",
         3059
+      ],
+      [
+        "2026-08-17",
+        3173
+      ]
+    ],
+    "gfodor/legal-skills": [
+      [
+        "2026-08-17",
+        363
       ]
     ],
     "github/spec-kit": [
       [
         "2026-08-14",
         128469
+      ],
+      [
+        "2026-08-17",
+        129601
       ]
     ],
     "guillaumemeyer/watermarks-remover": [
       [
         "2026-08-14",
         8007
+      ],
+      [
+        "2026-08-17",
+        12096
+      ]
+    ],
+    "hairyf/deepseek-harness-desktop": [
+      [
+        "2026-08-17",
+        326
       ]
     ],
     "headroomlabs-ai/headroom": [
       [
         "2026-08-14",
         66369
+      ],
+      [
+        "2026-08-17",
+        66554
       ]
     ],
     "heygen-com/hyperframes": [
       [
         "2026-08-14",
         40977
+      ],
+      [
+        "2026-08-17",
+        41263
       ]
     ],
     "hugohe3/ppt-master": [
       [
         "2026-08-14",
         46832
+      ],
+      [
+        "2026-08-17",
+        47338
       ]
     ],
     "imsai-sh/zhuzhiliao": [
       [
         "2026-08-14",
         2771
+      ],
+      [
+        "2026-08-17",
+        2833
       ]
     ],
     "jamiepine/voicebox": [
@@ -422,12 +870,20 @@
       [
         "2026-08-14",
         81872
+      ],
+      [
+        "2026-08-17",
+        82478
       ]
     ],
     "kvcache-ai/AgentENV": [
       [
         "2026-08-14",
         3194
+      ],
+      [
+        "2026-08-17",
+        3208
       ]
     ],
     "lopopolo/harness-engineering": [
@@ -436,52 +892,102 @@
         2503
       ]
     ],
+    "luongnv89/claude-howto": [
+      [
+        "2026-08-17",
+        41066
+      ]
+    ],
     "makecindy/cindy": [
       [
         "2026-08-14",
         2070
+      ],
+      [
+        "2026-08-17",
+        2099
       ]
     ],
     "mattpocock/skills": [
       [
         "2026-08-14",
         217524
+      ],
+      [
+        "2026-08-17",
+        219514
       ]
     ],
     "microsoft/skill-recorder": [
       [
         "2026-08-14",
         3112
+      ],
+      [
+        "2026-08-17",
+        3188
+      ]
+    ],
+    "milind-soni/OpenMausBot": [
+      [
+        "2026-08-17",
+        1134
       ]
     ],
     "mshumer/Claude-of-Duty": [
       [
         "2026-08-14",
         3119
+      ],
+      [
+        "2026-08-17",
+        3176
       ]
     ],
     "multica-ai/multica": [
       [
         "2026-08-14",
         46012
+      ],
+      [
+        "2026-08-17",
+        46233
       ]
     ],
     "mvanhorn/last30days-skill": [
       [
         "2026-08-14",
         58201
+      ],
+      [
+        "2026-08-17",
+        58421
+      ]
+    ],
+    "myYangyunfan/dsh_desktop": [
+      [
+        "2026-08-17",
+        403
       ]
     ],
     "nextlevelbuilder/ui-ux-pro-max-skill": [
       [
         "2026-08-14",
         116739
+      ],
+      [
+        "2026-08-17",
+        117396
       ]
     ],
     "nexu-io/open-design": [
       [
         "2026-08-14",
         86300
+      ],
+      [
+        "2026-08-17",
+        87782
       ]
     ],
     "nyblnet/bento": [
@@ -494,48 +1000,98 @@
       [
         "2026-08-14",
         272165
+      ],
+      [
+        "2026-08-17",
+        272887
       ]
     ],
     "odysseus-dev/odysseus": [
       [
         "2026-08-14",
         85377
+      ],
+      [
+        "2026-08-17",
+        85489
       ]
     ],
     "oil-oil/oil-motion": [
       [
         "2026-08-14",
         1723
+      ],
+      [
+        "2026-08-17",
+        1847
+      ]
+    ],
+    "omdsh-dev/DSH-better-sidebar": [
+      [
+        "2026-08-17",
+        1750
+      ]
+    ],
+    "omdsh-dev/dsh-at-file": [
+      [
+        "2026-08-17",
+        290
       ]
     ],
     "openclaw/openclaw": [
       [
         "2026-08-14",
         386325
+      ],
+      [
+        "2026-08-17",
+        386497
       ]
     ],
     "paperclipai/paperclip": [
       [
         "2026-08-14",
         78146
+      ],
+      [
+        "2026-08-17",
+        78573
       ]
     ],
     "pathwaycom/arc-task-gen": [
       [
         "2026-08-14",
         1987
+      ],
+      [
+        "2026-08-17",
+        3190
       ]
     ],
     "pbakaus/impeccable": [
       [
         "2026-08-14",
         59154
+      ],
+      [
+        "2026-08-17",
+        59725
+      ]
+    ],
+    "pemarine/cve-2026-41940-PoC": [
+      [
+        "2026-08-17",
+        278
       ]
     ],
     "powerycy/goutoujunshi": [
       [
         "2026-08-14",
         2189
+      ],
+      [
+        "2026-08-17",
+        2270
       ]
     ],
     "rohitg00/ai-engineering-from-scratch": [
@@ -548,42 +1104,106 @@
       [
         "2026-08-14",
         76174
+      ],
+      [
+        "2026-08-17",
+        76315
       ]
     ],
     "santifer/career-ops": [
       [
         "2026-08-14",
         63848
+      ],
+      [
+        "2026-08-17",
+        64116
+      ]
+    ],
+    "shadcn-labs/pdfcn": [
+      [
+        "2026-08-17",
+        649
+      ]
+    ],
+    "shadcn-ui/chatbot-template": [
+      [
+        "2026-08-17",
+        703
       ]
     ],
     "shanraisshan/claude-code-best-practice": [
       [
         "2026-08-14",
         64479
+      ],
+      [
+        "2026-08-17",
+        64585
       ]
     ],
     "sickn33/agentic-awesome-skills": [
       [
         "2026-08-14",
         44951
+      ],
+      [
+        "2026-08-17",
+        45040
       ]
     ],
     "slvDev/esp32-ai": [
       [
         "2026-08-14",
         3989
+      ],
+      [
+        "2026-08-17",
+        4031
+      ]
+    ],
+    "smontlouis/bible-strong-avatar-lab": [
+      [
+        "2026-08-17",
+        295
+      ]
+    ],
+    "sohaibdevv/youtube-music": [
+      [
+        "2026-08-17",
+        856
+      ]
+    ],
+    "soloists25wipe/Roblox-Pack-Executor-2026": [
+      [
+        "2026-08-17",
+        299
       ]
     ],
     "sqliteai/warp": [
       [
         "2026-08-14",
         2146
+      ],
+      [
+        "2026-08-17",
+        2168
       ]
     ],
     "stablyai/orca": [
       [
         "2026-08-14",
         45644
+      ],
+      [
+        "2026-08-17",
+        46743
+      ]
+    ],
+    "stanuwu/Sunrise": [
+      [
+        "2026-08-17",
+        462
       ]
     ],
     "tandpfun/wardrobe": [
@@ -596,57 +1216,153 @@
       [
         "2026-08-14",
         2405
+      ],
+      [
+        "2026-08-17",
+        2470
       ]
     ],
     "thedotmack/claude-mem": [
       [
         "2026-08-14",
         90763
+      ],
+      [
+        "2026-08-17",
+        90928
       ]
     ],
     "trycompai/crm": [
       [
         "2026-08-14",
         8440
+      ],
+      [
+        "2026-08-17",
+        8524
       ]
     ],
     "tw93/Mole": [
       [
         "2026-08-14",
         63524
+      ],
+      [
+        "2026-08-17",
+        63804
+      ]
+    ],
+    "ultraworkers/claw-code": [
+      [
+        "2026-08-17",
+        195070
       ]
     ],
     "vercel-labs/agent-browser": [
       [
         "2026-08-14",
         40634
+      ],
+      [
+        "2026-08-17",
+        40745
+      ]
+    ],
+    "vercel-labs/eve-software-factory-template": [
+      [
+        "2026-08-17",
+        841
       ]
     ],
     "vercel-labs/scriptc": [
       [
         "2026-08-14",
         3514
+      ],
+      [
+        "2026-08-17",
+        3555
+      ]
+    ],
+    "vibeinging/deepseek-harness-desktop-app": [
+      [
+        "2026-08-17",
+        311
       ]
     ],
     "xdash/FDE-the-Guidance-Book-of-Forward-Deployed-Engineer": [
       [
         "2026-08-14",
         4012
+      ],
+      [
+        "2026-08-17",
+        4108
+      ]
+    ],
+    "xiaobright/dsh-anchored-standard": [
+      [
+        "2026-08-17",
+        3217
+      ]
+    ],
+    "xinxinshuhao-create/grok-register": [
+      [
+        "2026-08-17",
+        443
+      ]
+    ],
+    "xoreaxeaxeax/skitter-creek-bath-salts": [
+      [
+        "2026-08-17",
+        1735
       ]
     ],
     "yc-software/qm": [
       [
         "2026-08-14",
         13551
+      ],
+      [
+        "2026-08-17",
+        13724
+      ]
+    ],
+    "yjh051108/dsh-router-standard": [
+      [
+        "2026-08-17",
+        279
+      ]
+    ],
+    "yjh051108/dsh-routing-suite": [
+      [
+        "2026-08-17",
+        3058
+      ]
+    ],
+    "ysr666/dsh-vision-router": [
+      [
+        "2026-08-17",
+        495
       ]
     ],
     "zhu1090093659/dsh-web-ui": [
       [
         "2026-08-14",
         1925
+      ],
+      [
+        "2026-08-17",
+        3674
+      ]
+    ],
+    "zouyuxuan122/Deepseek-Harness-EAC": [
+      [
+        "2026-08-17",
+        593
       ]
     ]
   },
-  "ultimo_invio": "2026-08-14T22:33:25+00:00",
-  "ultimo_run": "2026-08-14T22:30:49+00:00"
+  "ultimo_invio": "2026-08-17T05:36:20+00:00",
+  "ultimo_run": "2026-08-17T05:34:17+00:00"
 }
