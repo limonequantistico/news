@@ -29,11 +29,23 @@ import feedparser
 
 # --------------------------------------------------------------------------
 # Fonti. Per togliere una testata cancella la sua riga.
+#
+# Terzo campo: pezzi di URL da buttare via prima di guardare la data. Serve solo
+# ai feed che non sono elenchi di articoli. AI Hero pubblica un unico rss.xml
+# che e' l'indice di tutto il sito, quindi accanto ai post ci finiscono le
+# landing dei workshop, le pagine di iscrizione e le voci del dizionario: sono
+# pagine sempre uguali, non notizie, e la data di pubblicazione non le
+# distingue. Per le testate normali la tupla e' vuota e non filtriamo niente.
 # --------------------------------------------------------------------------
 
 FEED_RSS = [
-    ("TechCrunch", "https://techcrunch.com/feed/"),
-    ("The Verge", "https://www.theverge.com/rss/index.xml"),
+    ("TechCrunch", "https://techcrunch.com/feed/", ()),
+    ("The Verge", "https://www.theverge.com/rss/index.xml", ()),
+    (
+        "AI Hero",
+        "https://www.aihero.dev/rss.xml",
+        ("/workshops/", "/newsletter", "/subscribe", "/ai-coding-dictionary/"),
+    ),
 ]
 
 # Hacker News: front page della settimana via API ufficiale di ricerca.
@@ -293,7 +305,13 @@ def raccogli_hacker_news(adesso: datetime, errori: list[str]) -> list[dict]:
     return voci
 
 
-def raccogli_feed(nome: str, url: str, adesso: datetime, errori: list[str]) -> list[dict]:
+def raccogli_feed(
+    nome: str,
+    url: str,
+    adesso: datetime,
+    errori: list[str],
+    escludi: tuple[str, ...] = (),
+) -> list[dict]:
     try:
         grezzo = scarica(url)
     except RuntimeError as errore:
@@ -313,6 +331,8 @@ def raccogli_feed(nome: str, url: str, adesso: datetime, errori: list[str]) -> l
             quando = adesso
         collegamento = articolo.get("link") or ""
         if not collegamento:
+            continue
+        if any(pezzo in collegamento for pezzo in escludi):
             continue
         voci.append(
             {
@@ -419,8 +439,8 @@ def main() -> int:
     repo = raccogli_repo(stato, adesso, errori)
 
     notizie = raccogli_hacker_news(adesso, errori)
-    for nome, url in FEED_RSS:
-        notizie.extend(raccogli_feed(nome, url, adesso, errori))
+    for nome, url, escludi in FEED_RSS:
+        notizie.extend(raccogli_feed(nome, url, adesso, errori, escludi))
 
     # Lo storico delle stelle viene aggiornato per tutte le repo viste, anche
     # per quelle gia' inviate: serve a misurare la crescita, non a riproporle.

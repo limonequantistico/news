@@ -71,11 +71,31 @@ suggerimento, non un taglio.
 | Hacker News | API di ricerca ufficiale, storie degli ultimi 7 giorni **sopra i 150 punti**, ordinate per punti | 25 |
 | TechCrunch | feed RSS, articoli degli ultimi 7 giorni | 25 |
 | The Verge | feed RSS, articoli degli ultimi 7 giorni | 25 |
+| AI Hero | feed RSS, voci degli ultimi 7 giorni, meno gli URL esclusi (vedi sotto) | 25 |
 
 Differenza importante: **Hacker News si filtra da solo**, perche' la soglia dei
 punti e' un giudizio collettivo gia' avvenuto. Dai feed RSS invece entra tutto
 quello che e' recente, senza alcun filtro di rilevanza: li' lo scarto lo fa
 interamente il sintetizzatore.
+
+**Perche' AI Hero ha un filtro sugli URL e le altre no.** Le due testate
+pubblicano un feed di articoli: ogni voce e' una notizia, e la data basta a dire
+se e' di questa settimana. AI Hero (il blog di Matt Pocock: gli stessi contenuti
+che manda per email, pubblici, quindi non serve iscriversi) espone invece un
+solo `rss.xml` che e' l'indice dell'intero sito — 188 voci, di cui 70 sono le
+pagine del suo "AI Coding Dictionary", piu' le landing dei workshop e le pagine
+di iscrizione. Sono pagine permanenti, non uscite: la data non le distingue dai
+post, perche' cambia quando la pagina viene ritoccata. Quindi la riga in
+`FEED_RSS` porta un terzo campo con i pezzi di URL da buttare prima ancora di
+guardare la data — `/workshops/`, `/newsletter`, `/subscribe`,
+`/ai-coding-dictionary/` — e per le altre testate quel campo resta vuoto.
+
+Resta codice, non giudizio: e' una lista fissa di prefissi, non una valutazione
+del contenuto. Misurato il 21 agosto 2026, su trenta giorni il feed dava 5 voci
+e il filtro ne toglieva 1 (la landing "AI Coding Crash Course"), lasciando i 4
+post veri. Sulla finestra vera dei 7 giorni quella landing era **l'unica** voce
+in finestra, quindi il primo giro con questa fonte porta zero voci in piu': la
+cadenza di AI Hero e' circa un post a settimana, non e' una fonte che riempie.
 
 ### Il filtro che non discute
 
@@ -163,7 +183,7 @@ Tutto quello che decide la selezione sta in due file, in cima:
 
 | Cosa cambiare | Dove |
 | --- | --- |
-| testate RSS (aggiungere/togliere una riga) | `FEED_RSS` in `raccogli.py` |
+| testate RSS (aggiungere/togliere una riga, o cambiare gli URL esclusi di una fonte) | `FEED_RSS` in `raccogli.py` |
 | soglia dei punti di Hacker News | `HN_PUNTI_MINIMI` (150) |
 | le due query GitHub | `RICERCHE_GITHUB` |
 | ampiezza della finestra | `GIORNI_FINESTRA` (7) |
