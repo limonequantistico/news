@@ -27,6 +27,13 @@ tecnico reale.
 
 Nel dubbio, scarta. Il valore di questa email sta in quello che non contiene.
 
+Una nota su **AI Hero**, che nel materiale compare come fonte delle notizie: non
+e' una testata, e' il blog di Matt Pocock su come si lavora con gli agenti di
+codice. Le sue voci non sono attualita' ma tecnica, e vanno giudicate con la
+stessa domanda di tutto il resto — se salta questa riga, si perde qualcosa di
+utile? — guardando pero' a cosa insegnano, non a cosa e' successo. Se una voce e'
+la presentazione di un corso o di un workshop invece di una tecnica, scartala.
+
 ## Vincoli rigidi
 
 1. **Massimo 10 voci in tutto**, massimo 5 per sezione. Meno e' meglio.

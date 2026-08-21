@@ -39,8 +39,15 @@ vedi **[algoritmo.md](algoritmo.md)**.
   settimana prima — dal secondo giro in poi e' il vero delta.
 - **Hacker News**, API di ricerca ufficiale: storie della settimana sopra i 150
   punti.
-- **RSS**: TechCrunch, The Verge. Per togliere una testata, cancella la sua
-  riga in `FEED_RSS` dentro `raccogli.py`.
+- **RSS**: TechCrunch, The Verge, AI Hero. Per togliere una testata, cancella
+  la sua riga in `FEED_RSS` dentro `raccogli.py`.
+- **AI Hero** e' l'eccezione: non e' una testata di notizie ma il blog di Matt
+  Pocock su come si lavora davvero con gli agenti, e i post sono gli stessi
+  contenuti che manda per email, quindi non serve iscriversi. Il suo `rss.xml`
+  pero' e' l'indice di tutto il sito, non un elenco di articoli: il terzo campo
+  della riga in `FEED_RSS` elenca i pezzi di URL da buttare (landing dei
+  workshop, pagine di iscrizione, voci del dizionario). Per le altre testate
+  quel campo e' vuoto.
 
 ### Stato
 
