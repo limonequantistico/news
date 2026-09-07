@@ -40,6 +40,16 @@
       "titolo": "colbymchenry/codegraph",
       "url": "https://github.com/colbymchenry/codegraph"
     },
+    "github:crmne/fastpotify": {
+      "data": "2026-09-07",
+      "titolo": "crmne/fastpotify",
+      "url": "https://github.com/crmne/fastpotify"
+    },
+    "github:diegosouzapw/OmniRoute": {
+      "data": "2026-09-07",
+      "titolo": "diegosouzapw/OmniRoute",
+      "url": "https://github.com/diegosouzapw/OmniRoute"
+    },
     "github:dmmulroy/anti-slop": {
       "data": "2026-08-31",
       "titolo": "dmmulroy/anti-slop",
@@ -75,6 +85,11 @@
       "titolo": "multica-ai/multica",
       "url": "https://github.com/multica-ai/multica"
     },
+    "github:okf-memory/okf-agent-memory": {
+      "data": "2026-09-07",
+      "titolo": "okf-memory/okf-agent-memory",
+      "url": "https://github.com/okf-memory/okf-agent-memory"
+    },
     "github:rtk-ai/rtk": {
       "data": "2026-08-24",
       "titolo": "rtk-ai/rtk",
@@ -85,6 +100,11 @@
       "titolo": "sqliteai/warp",
       "url": "https://github.com/sqliteai/warp"
     },
+    "github:stablyai/orca": {
+      "data": "2026-09-07",
+      "titolo": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca"
+    },
     "github:thedotmack/claude-mem": {
       "data": "2026-08-24",
       "titolo": "thedotmack/claude-mem",
@@ -94,6 +114,11 @@
       "data": "2026-08-14",
       "titolo": "vercel-labs/agent-browser",
       "url": "https://github.com/vercel-labs/agent-browser"
+    },
+    "github:vinzdg/codenotch": {
+      "data": "2026-09-07",
+      "titolo": "vinzdg/codenotch",
+      "url": "https://github.com/vinzdg/codenotch"
     },
     "github:xoreaxeaxeax/skitter-creek-bath-salts": {
       "data": "2026-08-31",
@@ -180,6 +205,31 @@
       "titolo": "GLM-5.3 is now open-weight",
       "url": "https://huggingface.co/zai-org/GLM-5.3"
     },
+    "hn:49525378": {
+      "data": "2026-09-07",
+      "titolo": "Claude Fable 5.1 and Claude Mythos 5.1",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+    },
+    "hn:49537553": {
+      "data": "2026-09-07",
+      "titolo": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    },
+    "hn:49554643": {
+      "data": "2026-09-07",
+      "titolo": "GPT-6 Astra",
+      "url": "https://openai.com/index/gpt-6-astra/"
+    },
+    "hn:49568506": {
+      "data": "2026-09-07",
+      "titolo": "Formalizing Fermat's Last Theorem",
+      "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+    },
+    "hn:49570669": {
+      "data": "2026-09-07",
+      "titolo": "Actively exploited sandbox RCE in all Chromium versions",
+      "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046"
+    },
     "rss:https://techcrunch.com/?p=3153306": {
       "data": "2026-08-17",
       "titolo": "SpaceX officially closes its Cursor acquisition",
@@ -202,6 +252,12 @@
     }
   },
   "stelle": {
+    "0x6rss/instagram-private-graph": [
+      [
+        "2026-09-07",
+        325
+      ]
+    ],
     "0xjohnnydev/FilzaSlop": [
       [
         "2026-08-17",
@@ -214,10 +270,32 @@
         642
       ]
     ],
+    "34306/vphone-web": [
+      [
+        "2026-09-07",
+        288
+      ]
+    ],
     "666ghj/MiroFish": [
       [
         "2026-08-17",
         71079
+      ],
+      [
+        "2026-09-07",
+        71993
+      ]
+    ],
+    "Agenta-AI/awesome-ai-agent-platforms": [
+      [
+        "2026-09-07",
+        242
+      ]
+    ],
+    "Albert-Weasker/niubigeo": [
+      [
+        "2026-09-07",
+        639
       ]
     ],
     "Alishahryar1/free-claude-code": [
@@ -236,6 +314,10 @@
       [
         "2026-08-31",
         52119
+      ],
+      [
+        "2026-09-07",
+        53572
       ]
     ],
     "AminBlg/SimpleEnglish": [
@@ -252,6 +334,24 @@
       [
         "2026-08-17",
         566
+      ]
+    ],
+    "ApodexAI/FrontierAgent": [
+      [
+        "2026-09-07",
+        2023
+      ]
+    ],
+    "Appllama/liquid-glass-screens": [
+      [
+        "2026-09-07",
+        258
+      ]
+    ],
+    "BoardUI/boardui": [
+      [
+        "2026-09-07",
+        307
       ]
     ],
     "CHENG-LIANG1/real-company-interview-ai-coding-projects": [
@@ -288,6 +388,10 @@
       [
         "2026-08-31",
         50248
+      ],
+      [
+        "2026-09-07",
+        51251
       ]
     ],
     "Cleverfuxaqo1668/Polymarket-Telegram-Bot": [
@@ -310,6 +414,10 @@
       [
         "2026-08-31",
         3573
+      ],
+      [
+        "2026-09-07",
+        4399
       ]
     ],
     "DannyMac180/sol-advisor": [
@@ -364,6 +472,12 @@
         209
       ]
     ],
+    "DietrichGebert/ponytail": [
+      [
+        "2026-09-07",
+        130286
+      ]
+    ],
     "DrHazemAli/enterprise-system-design": [
       [
         "2026-08-17",
@@ -382,12 +496,28 @@
       [
         "2026-08-31",
         81148
+      ],
+      [
+        "2026-09-07",
+        81718
       ]
     ],
     "Electricitysheep/dsh-handbook": [
       [
         "2026-08-17",
         393
+      ]
+    ],
+    "EverettFish/holo-card-studio": [
+      [
+        "2026-09-07",
+        570
+      ]
+    ],
+    "EvoMap/AutoResearch": [
+      [
+        "2026-09-07",
+        1683
       ]
     ],
     "FareedKhan-dev/kimi-k3-in-c": [
@@ -444,6 +574,10 @@
       [
         "2026-08-31",
         112841
+      ],
+      [
+        "2026-09-07",
+        115487
       ]
     ],
     "HEJustinSun/my-girlfriend-jingtian-latex": [
@@ -482,6 +616,10 @@
       [
         "2026-08-31",
         47566
+      ],
+      [
+        "2026-09-07",
+        47833
       ]
     ],
     "HRuiCcc/music-geshizhuanhuan": [
@@ -502,6 +640,10 @@
       [
         "2026-08-31",
         2941
+      ],
+      [
+        "2026-09-07",
+        3829
       ]
     ],
     "Hmbown/CodeWhale": [
@@ -538,6 +680,10 @@
       [
         "2026-08-31",
         44371
+      ],
+      [
+        "2026-09-07",
+        46709
       ]
     ],
     "Jakubantalik/thinking-orbs": [
@@ -548,6 +694,12 @@
       [
         "2026-08-17",
         2495
+      ]
+    ],
+    "Jarvis322/macos-sysdata": [
+      [
+        "2026-09-07",
+        408
       ]
     ],
     "JordyZomer/lemmalog": [
@@ -572,12 +724,26 @@
       [
         "2026-08-31",
         101967
+      ],
+      [
+        "2026-09-07",
+        104025
       ]
     ],
     "K-Dense-AI/scientific-agent-skills": [
       [
         "2026-08-31",
         40316
+      ],
+      [
+        "2026-09-07",
+        43487
+      ]
+    ],
+    "KJGX66F/usque-custom-pro": [
+      [
+        "2026-09-07",
+        575
       ]
     ],
     "KKKKhazix/human-writing": [
@@ -620,6 +786,10 @@
       [
         "2026-08-31",
         47358
+      ],
+      [
+        "2026-09-07",
+        47807
       ]
     ],
     "Kritt-ai/open-kritt": [
@@ -632,6 +802,12 @@
       [
         "2026-08-24",
         292
+      ]
+    ],
+    "LIUFelix2004/God-minmax-H3": [
+      [
+        "2026-09-07",
+        247
       ]
     ],
     "LYiHub/Card-master-browser-extension-public": [
@@ -668,12 +844,22 @@
       [
         "2026-08-31",
         2860
+      ],
+      [
+        "2026-09-07",
+        3139
       ]
     ],
     "Leutenegger/book-to-skill": [
       [
         "2026-08-17",
         1159
+      ]
+    ],
+    "LunarXuan/image-prompt-reverse": [
+      [
+        "2026-09-07",
+        312
       ]
     ],
     "MIgHTy-alIeN/ai-trader-bot": [
@@ -686,6 +872,12 @@
       [
         "2026-08-31",
         231
+      ]
+    ],
+    "MSNightmare/FalconFlank": [
+      [
+        "2026-09-07",
+        533
       ]
     ],
     "MSNightmare/HardBreacher": [
@@ -716,6 +908,10 @@
       [
         "2026-08-31",
         58749
+      ],
+      [
+        "2026-09-07",
+        58894
       ]
     ],
     "MengTo/sylva": [
@@ -732,6 +928,10 @@
       [
         "2026-08-31",
         4732
+      ],
+      [
+        "2026-09-07",
+        5295
       ]
     ],
     "Merit-Systems/OpenInstinct": [
@@ -750,6 +950,10 @@
       [
         "2026-08-24",
         754
+      ],
+      [
+        "2026-09-07",
+        1849
       ]
     ],
     "MiaAI-Lab/DeepSeek-v4-Flash-One-DGX-Spark": [
@@ -768,6 +972,12 @@
       [
         "2026-08-31",
         209
+      ]
+    ],
+    "MiaAI-Lab/Qwen3.8-Flash-Next-Single-DGX-Spark": [
+      [
+        "2026-09-07",
+        224
       ]
     ],
     "MiniMax-AI/MiniMax-H3": [
@@ -814,6 +1024,10 @@
       [
         "2026-08-31",
         1107
+      ],
+      [
+        "2026-09-07",
+        2374
       ]
     ],
     "NanmiCoder/dsh-agent-teams": [
@@ -832,6 +1046,12 @@
       [
         "2026-08-31",
         388
+      ]
+    ],
+    "OpenVDN/vdn-minimax-h3": [
+      [
+        "2026-09-07",
+        332
       ]
     ],
     "PAICNI/CFBox": [
@@ -858,12 +1078,22 @@
       [
         "2026-08-31",
         76941
+      ],
+      [
+        "2026-09-07",
+        78530
       ]
     ],
     "PentagonConure42/youtube-downloader-zen": [
       [
         "2026-08-24",
         461
+      ]
+    ],
+    "PhiloLabs/fable51-worlds": [
+      [
+        "2026-09-07",
+        459
       ]
     ],
     "QoderAI/better-harness": [
@@ -910,6 +1140,12 @@
         401
       ]
     ],
+    "Rion-Wu-tech/wechat-intelligence-hub": [
+      [
+        "2026-09-07",
+        1567
+      ]
+    ],
     "S1N6H/pentest-harness": [
       [
         "2026-08-31",
@@ -930,6 +1166,10 @@
       [
         "2026-08-31",
         1863
+      ],
+      [
+        "2026-09-07",
+        1881
       ]
     ],
     "ShadowAqueduct/watermark-remover": [
@@ -970,6 +1210,10 @@
       [
         "2026-08-31",
         1848
+      ],
+      [
+        "2026-09-07",
+        1955
       ]
     ],
     "Straniero44/wenai": [
@@ -1016,6 +1260,10 @@
       [
         "2026-08-31",
         52278
+      ],
+      [
+        "2026-09-07",
+        52416
       ]
     ],
     "Wei-Shaw/sub2api": [
@@ -1028,6 +1276,10 @@
       [
         "2026-08-31",
         1655
+      ],
+      [
+        "2026-09-07",
+        2576
       ]
     ],
     "Yeachan-Heo/oh-my-claudecode": [
@@ -1084,6 +1336,10 @@
       [
         "2026-08-31",
         64374
+      ],
+      [
+        "2026-09-07",
+        64732
       ]
     ],
     "Zyrexnn/Cybermes": [
@@ -1110,6 +1366,12 @@
         5155
       ]
     ],
+    "aaronyi97/image-story-video-wizard": [
+      [
+        "2026-09-07",
+        312
+      ]
+    ],
     "acryldev/acryl": [
       [
         "2026-08-31",
@@ -1132,12 +1394,22 @@
       [
         "2026-08-31",
         91040
+      ],
+      [
+        "2026-09-07",
+        92689
       ]
     ],
     "adnanakil/nobuzz": [
       [
         "2026-08-24",
         196
+      ]
+    ],
+    "adtexterry-lgtm/unigit-ecosystem": [
+      [
+        "2026-09-07",
+        313
       ]
     ],
     "affaan-m/ECC": [
@@ -1156,6 +1428,16 @@
       [
         "2026-08-31",
         244923
+      ],
+      [
+        "2026-09-07",
+        252227
+      ]
+    ],
+    "ahujasid/camera-to-blender": [
+      [
+        "2026-09-07",
+        503
       ]
     ],
     "air-embodied-brain/Zetta-Embodiment": [
@@ -1178,6 +1460,10 @@
       [
         "2026-08-31",
         1656
+      ],
+      [
+        "2026-09-07",
+        2595
       ]
     ],
     "amap-cvlab/ABot-Recon": [
@@ -1208,6 +1494,18 @@
         14675
       ]
     ],
+    "anthropics/commerce-agents": [
+      [
+        "2026-09-07",
+        2325
+      ]
+    ],
+    "anthropics/fermats-last-theorem": [
+      [
+        "2026-09-07",
+        890
+      ]
+    ],
     "anthropics/skills": [
       [
         "2026-08-14",
@@ -1220,6 +1518,10 @@
       [
         "2026-08-24",
         171231
+      ],
+      [
+        "2026-09-07",
+        174957
       ]
     ],
     "antirez/h3.c": [
@@ -1238,6 +1540,10 @@
       [
         "2026-08-31",
         2511
+      ],
+      [
+        "2026-09-07",
+        2583
       ]
     ],
     "anywhere-labs/deepseek-harness-desktop": [
@@ -1258,6 +1564,10 @@
       [
         "2026-08-31",
         22341
+      ],
+      [
+        "2026-09-07",
+        24142
       ]
     ],
     "arvids-unavailable/openGym": [
@@ -1276,6 +1586,12 @@
         179
       ]
     ],
+    "ashemag/human-atlas": [
+      [
+        "2026-09-07",
+        1705
+      ]
+    ],
     "awesome-dsh-plugin/awesome-dsh-plugin": [
       [
         "2026-08-17",
@@ -1288,12 +1604,20 @@
       [
         "2026-08-31",
         13840
+      ],
+      [
+        "2026-09-07",
+        14741
       ]
     ],
     "b-nnett/grok-bot-0.18-reconstructed": [
       [
         "2026-08-31",
         3459
+      ],
+      [
+        "2026-09-07",
+        3493
       ]
     ],
     "babygoton/WorkDaddy": [
@@ -1322,6 +1646,18 @@
         6279
       ]
     ],
+    "biusberline/cloudflare-turnstile-solver": [
+      [
+        "2026-09-07",
+        258
+      ]
+    ],
+    "blader/humanizer": [
+      [
+        "2026-09-07",
+        44761
+      ]
+    ],
     "bojieli/ai-agent-book": [
       [
         "2026-08-24",
@@ -1330,6 +1666,10 @@
       [
         "2026-08-31",
         43833
+      ],
+      [
+        "2026-09-07",
+        45063
       ]
     ],
     "breezeblue-ai/breeze-tts": [
@@ -1350,10 +1690,28 @@
         3114
       ]
     ],
+    "btsouth/omakade": [
+      [
+        "2026-09-07",
+        296
+      ]
+    ],
     "buaacyw/code-world-model": [
       [
         "2026-08-31",
         323
+      ]
+    ],
+    "burakgon/stop-stutter": [
+      [
+        "2026-09-07",
+        487
+      ]
+    ],
+    "byJoey/warp-masque-actions": [
+      [
+        "2026-09-07",
+        430
       ]
     ],
     "calesthio/OpenMontage": [
@@ -1368,6 +1726,22 @@
       [
         "2026-08-24",
         49869
+      ],
+      [
+        "2026-09-07",
+        56483
+      ]
+    ],
+    "career-ops-hq/career-ops": [
+      [
+        "2026-09-07",
+        70390
+      ]
+    ],
+    "carnot-tech/consulting-pptx-skill": [
+      [
+        "2026-09-07",
+        250
       ]
     ],
     "cbrock84/headcount": [
@@ -1388,12 +1762,22 @@
       [
         "2026-08-31",
         2738
+      ],
+      [
+        "2026-09-07",
+        2873
       ]
     ],
     "cclank/lanshu-create-ai-presenter-video": [
       [
         "2026-08-24",
         713
+      ]
+    ],
+    "chenglou/pretext": [
+      [
+        "2026-09-07",
+        50216
       ]
     ],
     "chrisgreg/boop": [
@@ -1428,6 +1812,16 @@
       [
         "2026-08-31",
         68547
+      ],
+      [
+        "2026-09-07",
+        68775
+      ]
+    ],
+    "codejunkie99/fable-orchestrator": [
+      [
+        "2026-09-07",
+        554
       ]
     ],
     "colbymchenry/codegraph": [
@@ -1456,6 +1850,10 @@
       [
         "2026-08-31",
         2930
+      ],
+      [
+        "2026-09-07",
+        2966
       ]
     ],
     "coreyhaines31/marketingskills": [
@@ -1466,18 +1864,32 @@
       [
         "2026-08-31",
         46238
+      ],
+      [
+        "2026-09-07",
+        47794
       ]
     ],
     "crmne/fastpotify": [
       [
         "2026-08-31",
         655
+      ],
+      [
+        "2026-09-07",
+        3420
       ]
     ],
     "damejan80/tokentab": [
       [
         "2026-08-31",
         496
+      ]
+    ],
+    "danielblnc/DLSS-NR-on-AMD": [
+      [
+        "2026-09-07",
+        812
       ]
     ],
     "dataelement/dsh-desktop": [
@@ -1492,6 +1904,10 @@
       [
         "2026-08-31",
         3504
+      ],
+      [
+        "2026-09-07",
+        4394
       ]
     ],
     "datawhalechina/hello-agents": [
@@ -1530,6 +1946,10 @@
       [
         "2026-08-31",
         205808
+      ],
+      [
+        "2026-09-07",
+        214744
       ]
     ],
     "diegosouzapw/OmniRoute": [
@@ -1548,6 +1968,10 @@
       [
         "2026-08-31",
         58964
+      ],
+      [
+        "2026-09-07",
+        62233
       ]
     ],
     "digimata/quill": [
@@ -1558,6 +1982,12 @@
       [
         "2026-08-17",
         3814
+      ]
+    ],
+    "diudiu-tech/delivery-harness": [
+      [
+        "2026-09-07",
+        1950
       ]
     ],
     "dmmulroy/anti-slop": [
@@ -1572,6 +2002,22 @@
       [
         "2026-08-31",
         3919
+      ],
+      [
+        "2026-09-07",
+        4145
+      ]
+    ],
+    "donvito/codex-astra-luna-orchestrator": [
+      [
+        "2026-09-07",
+        261
+      ]
+    ],
+    "dreamers-laboratory/image-to-3d-pipeline": [
+      [
+        "2026-09-07",
+        302
       ]
     ],
     "drumih/turbo-fieldfare": [
@@ -1592,6 +2038,16 @@
       [
         "2026-08-31",
         2903
+      ],
+      [
+        "2026-09-07",
+        3352
+      ]
+    ],
+    "dsh-tauri-desk/deepseek-harness-desktop": [
+      [
+        "2026-09-07",
+        1758
       ]
     ],
     "duolahypercho/codex-router": [
@@ -1612,12 +2068,20 @@
       [
         "2026-08-31",
         1793
+      ],
+      [
+        "2026-09-07",
+        1902
       ]
     ],
     "elie222/rakazo": [
       [
         "2026-08-17",
         572
+      ],
+      [
+        "2026-09-07",
+        2053
       ]
     ],
     "eternityspring/shuohao-skills": [
@@ -1628,6 +2092,12 @@
       [
         "2026-08-31",
         2467
+      ]
+    ],
+    "evangelosvlachos96-dotcom/booking-microservices": [
+      [
+        "2026-09-07",
+        240
       ]
     ],
     "firecrawl/anydoc": [
@@ -1692,6 +2162,10 @@
       [
         "2026-08-31",
         130539
+      ],
+      [
+        "2026-09-07",
+        131848
       ]
     ],
     "geeklee/srt-whiteboard-animation": [
@@ -1746,6 +2220,10 @@
       [
         "2026-08-31",
         19592
+      ],
+      [
+        "2026-09-07",
+        21129
       ]
     ],
     "guillermolg00/morphicons": [
@@ -1762,6 +2240,10 @@
       [
         "2026-08-31",
         2415
+      ],
+      [
+        "2026-09-07",
+        2539
       ]
     ],
     "hairyf/deepseek-harness-desktop": [
@@ -1786,6 +2268,10 @@
       [
         "2026-08-31",
         68154
+      ],
+      [
+        "2026-09-07",
+        69222
       ]
     ],
     "heygen-com/hyperframes": [
@@ -1804,6 +2290,10 @@
       [
         "2026-08-31",
         43294
+      ],
+      [
+        "2026-09-07",
+        44580
       ]
     ],
     "hkqr/my-free-code": [
@@ -1828,6 +2318,10 @@
       [
         "2026-08-31",
         50545
+      ],
+      [
+        "2026-09-07",
+        52678
       ]
     ],
     "iAmCorey/Wake": [
@@ -1850,6 +2344,12 @@
         2863
       ]
     ],
+    "inclusionAI/Choruz": [
+      [
+        "2026-09-07",
+        330
+      ]
+    ],
     "jamiepine/voicebox": [
       [
         "2026-08-14",
@@ -1868,6 +2368,12 @@
         349
       ]
     ],
+    "joeseesun/qiaomu-book-reader": [
+      [
+        "2026-09-07",
+        236
+      ]
+    ],
     "josiah-nelson/eidos": [
       [
         "2026-08-24",
@@ -1884,6 +2390,18 @@
       [
         "2026-08-31",
         806
+      ]
+    ],
+    "kacperkapusciak/goldie": [
+      [
+        "2026-09-07",
+        1889
+      ]
+    ],
+    "kajisho5/ffmpeg-skill": [
+      [
+        "2026-09-07",
+        337
       ]
     ],
     "kgoedecke/doop": [
@@ -1914,6 +2432,10 @@
       [
         "2026-08-31",
         85147
+      ],
+      [
+        "2026-09-07",
+        85743
       ]
     ],
     "kunchenguid/backpass": [
@@ -1932,16 +2454,34 @@
         3208
       ]
     ],
+    "kydlikebtc/awesome-grokbot": [
+      [
+        "2026-09-07",
+        331
+      ]
+    ],
     "lanicer/cve-2026-41940-PoC": [
       [
         "2026-08-24",
         527
       ]
     ],
+    "lennney/stop-that-shit": [
+      [
+        "2026-09-07",
+        1721
+      ]
+    ],
     "leopard627/fire-your-seo-agency": [
       [
         "2026-08-31",
         375
+      ]
+    ],
+    "lexmount/moli": [
+      [
+        "2026-09-07",
+        1766
       ]
     ],
     "lili0926/player": [
@@ -1954,6 +2494,12 @@
       [
         "2026-08-24",
         208
+      ]
+    ],
+    "lnkiai/m3e-canvas": [
+      [
+        "2026-09-07",
+        4494
       ]
     ],
     "localai-org/kimodo.cpp": [
@@ -2004,6 +2550,10 @@
       [
         "2026-08-24",
         234218
+      ],
+      [
+        "2026-09-07",
+        255646
       ]
     ],
     "microsoft/skill-recorder": [
@@ -2028,6 +2578,10 @@
       [
         "2026-08-31",
         1918
+      ],
+      [
+        "2026-09-07",
+        2263
       ]
     ],
     "missuo/herdrm": [
@@ -2062,6 +2616,10 @@
       [
         "2026-08-31",
         149176
+      ],
+      [
+        "2026-09-07",
+        150612
       ]
     ],
     "multica-ai/multica": [
@@ -2080,6 +2638,10 @@
       [
         "2026-08-31",
         48376
+      ],
+      [
+        "2026-09-07",
+        49117
       ]
     ],
     "mvanhorn/last30days-skill": [
@@ -2098,6 +2660,10 @@
       [
         "2026-08-31",
         60745
+      ],
+      [
+        "2026-09-07",
+        61485
       ]
     ],
     "myYangyunfan/dsh_desktop": [
@@ -2106,10 +2672,26 @@
         403
       ]
     ],
+    "n0de-sudo/Cloudflare-Tools": [
+      [
+        "2026-09-07",
+        247
+      ]
+    ],
+    "nahrek/polyledger": [
+      [
+        "2026-09-07",
+        620
+      ]
+    ],
     "nateherkai/scroll-craft": [
       [
         "2026-08-24",
         525
+      ],
+      [
+        "2026-09-07",
+        2113
       ]
     ],
     "nateherkai/snagtime": [
@@ -2134,6 +2716,10 @@
       [
         "2026-08-31",
         123373
+      ],
+      [
+        "2026-09-07",
+        125664
       ]
     ],
     "nexu-io/open-design": [
@@ -2152,6 +2738,10 @@
       [
         "2026-08-31",
         92955
+      ],
+      [
+        "2026-09-07",
+        94578
       ]
     ],
     "nyblnet/bento": [
@@ -2182,6 +2772,10 @@
       [
         "2026-08-31",
         279873
+      ],
+      [
+        "2026-09-07",
+        282632
       ]
     ],
     "odysseus-dev/odysseus": [
@@ -2200,6 +2794,10 @@
       [
         "2026-08-31",
         86607
+      ],
+      [
+        "2026-09-07",
+        86943
       ]
     ],
     "oil-oil/oil-motion": [
@@ -2218,6 +2816,12 @@
       [
         "2026-08-31",
         2124
+      ]
+    ],
+    "okf-memory/okf-agent-memory": [
+      [
+        "2026-09-07",
+        417
       ]
     ],
     "omdsh-dev/DSH-better-sidebar": [
@@ -2246,6 +2850,12 @@
         239
       ]
     ],
+    "op7418/guizang-yingzao-skill": [
+      [
+        "2026-09-07",
+        368
+      ]
+    ],
     "openTrinity/mycontext": [
       [
         "2026-08-31",
@@ -2268,6 +2878,10 @@
       [
         "2026-08-31",
         388186
+      ],
+      [
+        "2026-09-07",
+        389085
       ]
     ],
     "paperclipai/paperclip": [
@@ -2286,6 +2900,10 @@
       [
         "2026-08-31",
         79734
+      ],
+      [
+        "2026-09-07",
+        80150
       ]
     ],
     "pathwaycom/arc-task-gen": [
@@ -2322,12 +2940,22 @@
       [
         "2026-08-31",
         64218
+      ],
+      [
+        "2026-09-07",
+        66187
       ]
     ],
     "pemarine/cve-2026-41940-PoC": [
       [
         "2026-08-17",
         278
+      ]
+    ],
+    "pierrenade/short-video-generator-AI": [
+      [
+        "2026-09-07",
+        1139
       ]
     ],
     "powerycy/goutoujunshi": [
@@ -2338,6 +2966,12 @@
       [
         "2026-08-17",
         2270
+      ]
+    ],
+    "rakanki911/DLSS5-Swapper": [
+      [
+        "2026-09-07",
+        2497
       ]
     ],
     "robbyant-research/Zero-WAM": [
@@ -2358,6 +2992,10 @@
       [
         "2026-08-31",
         51478
+      ],
+      [
+        "2026-09-07",
+        52701
       ]
     ],
     "rtk-ai/rtk": [
@@ -2376,6 +3014,10 @@
       [
         "2026-08-31",
         78012
+      ],
+      [
+        "2026-09-07",
+        79189
       ]
     ],
     "s0lness/awesome-esp32": [
@@ -2398,6 +3040,10 @@
       [
         "2026-08-31",
         4651
+      ],
+      [
+        "2026-09-07",
+        5015
       ]
     ],
     "sam70361/emotion-ball": [
@@ -2428,6 +3074,10 @@
       [
         "2026-08-31",
         4815
+      ],
+      [
+        "2026-09-07",
+        6491
       ]
     ],
     "saurabhkumar8112/cyclomatic-complexity-skill": [
@@ -2464,6 +3114,10 @@
       [
         "2026-08-31",
         65415
+      ],
+      [
+        "2026-09-07",
+        65708
       ]
     ],
     "sickn33/agentic-awesome-skills": [
@@ -2482,6 +3136,10 @@
       [
         "2026-08-31",
         45740
+      ],
+      [
+        "2026-09-07",
+        46090
       ]
     ],
     "slvDev/esp32-ai": [
@@ -2516,6 +3174,12 @@
       [
         "2026-08-17",
         299
+      ]
+    ],
+    "sonicloudco/recorder": [
+      [
+        "2026-09-07",
+        503
       ]
     ],
     "soul-99/SU_IMD": [
@@ -2554,6 +3218,10 @@
       [
         "2026-08-31",
         57935
+      ],
+      [
+        "2026-09-07",
+        63151
       ]
     ],
     "stanuwu/Sunrise": [
@@ -2566,6 +3234,12 @@
       [
         "2026-08-14",
         1886
+      ]
+    ],
+    "techjanitor/botmaker": [
+      [
+        "2026-09-07",
+        232
       ]
     ],
     "thebuggeddev/anatomy": [
@@ -2600,6 +3274,18 @@
         91635
       ]
     ],
+    "thisisgm/flea": [
+      [
+        "2026-09-07",
+        337
+      ]
+    ],
+    "tigerless-labs/agent-memory": [
+      [
+        "2026-09-07",
+        456
+      ]
+    ],
     "tinyhumansai/openhuman": [
       [
         "2026-08-31",
@@ -2614,6 +3300,10 @@
       [
         "2026-08-31",
         2351
+      ],
+      [
+        "2026-09-07",
+        2444
       ]
     ],
     "tradecatlabs/shulihuazixuecongshu": [
@@ -2636,6 +3326,12 @@
         8857
       ]
     ],
+    "tt-a1i/archify": [
+      [
+        "2026-09-07",
+        51754
+      ]
+    ],
     "tw93/Mole": [
       [
         "2026-08-14",
@@ -2652,6 +3348,10 @@
       [
         "2026-08-31",
         65514
+      ],
+      [
+        "2026-09-07",
+        66473
       ]
     ],
     "ultraworkers/claw-code": [
@@ -2692,6 +3392,10 @@
       [
         "2026-08-31",
         2629
+      ],
+      [
+        "2026-09-07",
+        2787
       ]
     ],
     "vercel-labs/scriptc": [
@@ -2710,10 +3414,20 @@
         311
       ]
     ],
+    "vinzdg/codenotch": [
+      [
+        "2026-09-07",
+        799
+      ]
+    ],
     "vvxw/deploy-vercel": [
       [
         "2026-08-24",
         1236
+      ],
+      [
+        "2026-09-07",
+        1650
       ]
     ],
     "wang2122/sprix-sage-router": [
@@ -2724,6 +3438,16 @@
       [
         "2026-08-31",
         2791
+      ],
+      [
+        "2026-09-07",
+        3814
+      ]
+    ],
+    "what1f/kitter": [
+      [
+        "2026-09-07",
+        256
       ]
     ],
     "wide-trace/open-higgsfield": [
@@ -2776,6 +3500,10 @@
       [
         "2026-08-31",
         3810
+      ],
+      [
+        "2026-09-07",
+        3823
       ]
     ],
     "xinxinshuhao-create/grok-register": [
@@ -2796,6 +3524,22 @@
       [
         "2026-08-31",
         1967
+      ],
+      [
+        "2026-09-07",
+        1997
+      ]
+    ],
+    "yang0/handraw-style": [
+      [
+        "2026-09-07",
+        275
+      ]
+    ],
+    "yanliudesign/mono-color-skill": [
+      [
+        "2026-09-07",
+        2835
       ]
     ],
     "yc-software/qm": [
@@ -2812,6 +3556,12 @@
         14120
       ]
     ],
+    "yczz/oc-english": [
+      [
+        "2026-09-07",
+        845
+      ]
+    ],
     "yetone/cumora": [
       [
         "2026-08-24",
@@ -2820,6 +3570,10 @@
       [
         "2026-08-31",
         3338
+      ],
+      [
+        "2026-09-07",
+        3509
       ]
     ],
     "yjh051108/dsh-router-standard": [
@@ -2840,6 +3594,10 @@
       [
         "2026-08-31",
         6991
+      ],
+      [
+        "2026-09-07",
+        7119
       ]
     ],
     "ysr666/dsh-vision-router": [
@@ -2864,6 +3622,10 @@
       [
         "2026-08-31",
         6561
+      ],
+      [
+        "2026-09-07",
+        7078
       ]
     ],
     "zhu1090093659/dsh-web-ui": [
@@ -2887,6 +3649,6 @@
       ]
     ]
   },
-  "ultimo_invio": "2026-08-31T11:27:06+00:00",
-  "ultimo_run": "2026-08-31T11:25:33+00:00"
+  "ultimo_invio": "2026-09-07T11:04:29+00:00",
+  "ultimo_run": "2026-09-07T11:02:33+00:00"
 }
