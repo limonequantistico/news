@@ -97,6 +97,44 @@ post veri. Sulla finestra vera dei 7 giorni quella landing era **l'unica** voce
 in finestra, quindi il primo giro con questa fonte porta zero voci in piu': la
 cadenza di AI Hero e' circa un post a settimana, non e' una fonte che riempie.
 
+### Paper
+
+| Fonte | Come entra | Tetto |
+| --- | --- | --- |
+| Hugging Face Daily Papers | API ufficiale, una chiamata per ognuno dei 7 giorni, paper **sopra i 50 voti**, ordinati per voti | 25 |
+
+**Perche' non arXiv.** Misurato sulla settimana 8–14 settembre 2026, arXiv ha
+pubblicato 1.994 paper sulle sole cs.AI, cs.LG e cs.CL messe insieme (1.057 +
+984 + 535, deduplicati), circa 285 al giorno. Buttarli nel materiale
+significherebbe passare da ~150 candidati a ~2.150 e chiedere al sintetizzatore
+di scegliere tra titoli e abstract senza alcun segnale: sceglierebbe i titoli
+piu' promettenti, che e' esattamente il modo in cui questo sistema non deve
+funzionare. Daily Papers e' invece una lista compilata da persone e votata: la
+stessa struttura dei punti di Hacker News, cioe' un giudizio gia' avvenuto fuori
+di qui.
+
+Numeri della stessa settimana su Daily Papers: 133 paper segnalati in 7 giorni,
+di cui 84 sopra i 10 voti, 47 sopra i 30, **27 sopra i 50** (la soglia scelta) e
+15 sopra i 100. Cinquanta tiene i candidati nello stesso ordine di grandezza
+delle altre fonti — venticinque voci circa — senza ridurli a una manciata.
+
+**La data che conta e' quella della segnalazione**, non quella di pubblicazione
+su arXiv. Un paper uscito il 7 settembre puo' comparire nella lista del 16: e'
+il giorno in cui qualcuno se n'e' accorto, ed e' quello che ci interessa.
+Filtrare per `publishedAt` lo avrebbe fatto sparire dalla finestra. Lo stesso
+paper puo' comparire in piu' giorni: teniamo la prima segnalazione e il
+conteggio voti piu' alto.
+
+**Sabato e domenica la lista e' vuota.** Non e' un guasto ed e' irrilevante per
+un giro del lunedi' che guarda indietro sette giorni. Un giorno non raggiungibile
+per un errore vero finisce invece tra le fonti in errore in cima a `materiale.md`,
+con l'elenco dei giorni persi.
+
+**Il codice come tiebreak.** L'API restituisce anche la repo GitHub collegata al
+paper, quando c'e' (13 su 25 in un giorno campione), con le stelle. Finisce nel
+materiale come fatto, ed e' il criterio a parita' di tutto il resto nel prompt:
+un paper con codice pubblico e' verificabile, uno senza va preso sulla parola.
+
 ### Il filtro che non discute
 
 Prima di scrivere `materiale.md`, la raccolta toglie **tutto cio' che ti e' gia'
@@ -126,7 +164,10 @@ scarta**.
 
 I vincoli rigidi:
 
-- massimo **10 voci** in tutto, massimo **5 per sezione**;
+- massimo **10 voci tra Repo e Notizie**, 5 per sezione, piu' **massimo 3
+  paper** che stanno fuori da quel conto. I paper non tolgono posto a nessuno:
+  e' una scelta, ed e' l'unico punto in cui la mail puo' superare le dieci voci
+  (vedi *La prova dei paper* piu' sotto);
 - **"questa settimana niente" e' una risposta legittima**, per una sezione o per
   entrambe — se il sistema fosse obbligato a riempire gli slot li riempirebbe di
   robaccia;
@@ -134,6 +175,60 @@ I vincoli rigidi:
 
 Sulla crescita delle stelle il prompt dice una cosa precisa: e' un indizio di
 attenzione, non di qualita'. Serve ad accorgersi di una repo, non a giustificarla.
+Sui voti dei paper dice la stessa cosa, piu' forte: il sintetizzatore legge
+**l'abstract**, che gli autori scrivono per farsi leggere, e il prompt gli chiede
+esplicitamente di scartare l'annuncio di modello travestito da paper.
+
+Che quel paragrafo morda si vede sui giri di prova del 18 settembre 2026: dei 24
+candidati ha sempre scelto voci molto in basso nella lista — sessanta voti circa
+— scartando tutti quelli sopra i 100, compresi i tre in cima con 681, 403 e 310
+voti, che erano presentazioni di modelli con un numero di arXiv sopra.
+
+**I paper non si segnalano, si spiegano.** E' la differenza vera tra quella
+sezione e le altre due, ed e' nata da un errore del primo giro: le voci erano
+corrette e illeggibili — "Grouped Value Attention: efficient KV caching" dice
+qualcosa a chi segue la letteratura e niente a chi scrive software. Per repo e
+notizie una riga basta perche' il lettore sa gia' cos'e' una repo e cos'e' un
+rilascio; di un paper non conosce il gergo e non ha modo di capire dall'abstract
+se lo riguarda, quindi un paper solo segnalato e' un paper che non aprira' mai.
+Il prompt chiede percio' quattro o cinque righe: cosa hanno fatto, partendo dal
+problema che c'era prima, e cosa cambierebbe per chi costruisce cose — con
+l'obbligo di spiegare ogni termine tecnico nella frase stessa e il permesso
+esplicito di concludere "per ora e' un risultato di laboratorio". E' l'unica
+eccezione alla regola delle due righe, e vale solo li'.
+
+Ha una conseguenza sulla selezione, scritta nel prompt: tra due paper si prende
+quello la cui conseguenza si riesce a spiegare. Un risultato importante che non
+si rende comprensibile in quattro righe, in questa mail, vale meno di uno piu'
+piccolo che si capisce.
+
+---
+
+## La prova dei paper
+
+La sezione paper e' accesa **in prova dal 18 settembre 2026**, e la prova ha una
+data di scadenza: dopo quattro numeri — cioe' **dal 19 ottobre 2026** — si
+guarda l'archivio e si decide, invece di lasciarla li' per inerzia.
+
+Le domande a cui rispondere allora, in ordine:
+
+1. Di quei paper, quanti ne hai aperti davvero?
+2. Quante volte la spiegazione era comprensibile senza cercare altro fuori?
+3. La mail e' diventata piu' lunga di quanto ti va di leggere il lunedi'?
+
+La terza non e' secondaria. I paper stanno **fuori** dal tetto delle dieci voci,
+quindi una settimana piena adesso puo' arrivare a tredici voci, e tre di quelle
+sono lunghe quattro righe invece di una. E' esattamente il tipo di crescita che
+il `README` dice di temere — "un'email puntuale con venti link diventa in tre
+settimane una mail che archivio senza aprire" — e qui e' stata accettata di
+proposito, per non far competere i paper con le altre sezioni prima di sapere se
+valgono. Se dopo quattro numeri la risposta e' "bella ma non la leggo", la cosa
+giusta e' togliere la sezione, non accorciarla.
+
+Gli esiti possibili sono tre e vanno scritti qui quando si decide: **togliere**
+(si cancella `raccogli_paper` e la sezione dal prompt, una ventina di righe),
+**tenere ma dentro il tetto** (i paper tornano a competere con repo e notizie),
+**tenere cosi'**.
 
 ---
 
@@ -160,6 +255,15 @@ prima di concludere che "il sistema non ha visto una cosa importante".
   vede nome, descrizione, topics, linguaggio, stelle e crescita. Non apre il
   README. Per questo il link e' obbligatorio: il giudizio e' un filtro, la
   verifica resta tua.
+- **Dei paper legge l'abstract, non il paper.** E' il punto cieco piu' grosso di
+  questa fonte: un abstract lo scrivono gli autori per farsi leggere, e a
+  differenza di una repo non c'e' nemmeno un numero di stelle che dica se
+  qualcuno lo usa davvero. Il link e' l'unica difesa, come per le repo.
+- **I paper che nessuno vota non esistono.** Sotto i 50 voti su Daily Papers non
+  si entra, e su Daily Papers finisce solo cio' che qualcuno ha segnalato: un
+  buon paper di un gruppo senza pubblico e' fuori dal campo visivo, e i ~1.970
+  paper a settimana che arXiv pubblica oltre questa lista non vengono nemmeno
+  guardati. E' una fonte per non restare del tutto scoperti, non una rassegna.
 - **Una repo vecchia che esplode oggi e' invisibile.** L'universo osservato e'
   "creata nell'ultimo anno". Un progetto del 2019 che diventa improvvisamente
   centrale non lo pesca nessuna delle due query.
@@ -185,14 +289,16 @@ Tutto quello che decide la selezione sta in due file, in cima:
 | --- | --- |
 | testate RSS (aggiungere/togliere una riga, o cambiare gli URL esclusi di una fonte) | `FEED_RSS` in `raccogli.py` |
 | soglia dei punti di Hacker News | `HN_PUNTI_MINIMI` (150) |
+| soglia dei voti dei paper | `PAPER_VOTI_MINIMI` (50) |
 | le due query GitHub | `RICERCHE_GITHUB` |
 | ampiezza della finestra | `GIORNI_FINESTRA` (7) |
-| quanti candidati per fonte | `MAX_REPO_PER_RICERCA` (50), `MAX_NOTIZIE_PER_FONTE` (25) |
+| quanti candidati per fonte | `MAX_REPO_PER_RICERCA` (50), `MAX_NOTIZIE_PER_FONTE` (25), `MAX_PAPER_CANDIDATI` (25) |
 | distanza minima tra due snapshot per calcolare la crescita | `GIORNI_MINIMI_CONFRONTO` (2) |
 | **il criterio, i tetti, il tono** | `prompt.md` |
 
-I tetti di 10 voci e 5 per sezione stanno nel prompt, non nel codice: sono un
-giudizio, non un limite tecnico.
+I tetti — 10 voci tra repo e notizie, 5 per sezione, 3 paper fuori conto —
+stanno nel prompt, non nel codice: sono un giudizio, non un limite tecnico. Lo
+e' anche la lunghezza delle voci, due righe ovunque tranne che nei paper.
 
 ---
 
@@ -212,3 +318,9 @@ arriva col massimo di voci, a tagliare e' il tetto e non il criterio, e il tetto
 va abbassato. Se invece compaiono settimane da 6 o 7 voci, vuol dire che il
 criterio morde da solo. L'archivio in git tiene il conto senza che tu debba
 ricordartelo.
+
+Fino al 14 settembre 2026 il conto e' stato 5+5 per cinque giri su sei: il tetto
+tagliava, non il criterio. Da adesso i numeri da guardare sono tre, e il terzo
+si legge a parte: i paper non competono con gli altri due, quindi non dicono
+niente sul criterio — dicono solo quanto e' diventata lunga la mail. Sono la
+cosa da pesare il 19 ottobre.

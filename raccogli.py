@@ -51,6 +51,18 @@ FEED_RSS = [
 # Hacker News: front page della settimana via API ufficiale di ricerca.
 HN_PUNTI_MINIMI = 150
 
+# Paper: la lista "Daily Papers" di Hugging Face, una chiamata per ogni giorno
+# della finestra. Non e' arXiv: e' una selezione fatta da persone, con un voto
+# sopra. arXiv grezzo darebbe ~2.000 paper a settimana solo su cs.AI+cs.LG+cs.CL
+# e il sintetizzatore sceglierebbe a caso; qui la soglia dei voti fa lo stesso
+# lavoro dei punti di Hacker News, cioe' un filtro gia' avvenuto fuori di qui.
+#
+# La lista esce solo nei giorni feriali: sabato e domenica l'API risponde con
+# un elenco vuoto, e va bene cosi'.
+HF_DAILY_PAPERS = "https://huggingface.co/api/daily_papers?date={data}"
+PAPER_VOTI_MINIMI = 50
+MAX_PAPER_CANDIDATI = 25
+
 # Ricerche GitHub, in ordine di freschezza: chi compare in piu' ricerche tiene
 # l'etichetta della prima.
 #
@@ -305,6 +317,74 @@ def raccogli_hacker_news(adesso: datetime, errori: list[str]) -> list[dict]:
     return voci
 
 
+def raccogli_paper(adesso: datetime, errori: list[str]) -> list[dict]:
+    """Paper segnalati su Hugging Face Daily Papers nella finestra.
+
+    Si interroga un giorno alla volta e si filtra per voti. La data che conta e'
+    quella in cui il paper e' comparso nella lista, non quella di pubblicazione
+    su arXiv: un paper di dieci giorni prima puo' essere segnalato oggi, e in
+    quel caso e' notizia di oggi. Lo stesso paper puo' comparire in piu' giorni:
+    teniamo la prima segnalazione e il conteggio voti piu' alto.
+    """
+    per_id: dict[str, dict] = {}
+    giorni_persi: list[str] = []
+
+    for indietro in range(GIORNI_FINESTRA):
+        data = giorno(adesso - timedelta(days=indietro))
+        try:
+            elenco = scarica_json(HF_DAILY_PAPERS.format(data=data))
+        except (RuntimeError, ValueError):
+            giorni_persi.append(data)
+            continue
+        # Nei giorni festivi l'elenco e' vuoto; se invece l'API risponde con un
+        # oggetto (errore applicativo con 200) il giorno vale come perso.
+        if not isinstance(elenco, list):
+            giorni_persi.append(data)
+            continue
+
+        for voce in elenco:
+            paper = voce.get("paper") or {}
+            identificativo = (paper.get("id") or "").strip()
+            if not identificativo:
+                continue
+            voti = paper.get("upvotes") or 0
+            organizzazione = (voce.get("organization") or {}).get("fullname") or ""
+            repo_codice = paper.get("githubRepo") or ""
+
+            precedente = per_id.get(identificativo)
+            if precedente:
+                precedente["voti"] = max(precedente["voti"], voti)
+                precedente["segnalato"] = min(precedente["segnalato"], data)
+                continue
+
+            per_id[identificativo] = {
+                "chiave": f"paper:{identificativo}",
+                "tipo": "paper",
+                "titolo": ripulisci(paper.get("title"), 200) or "(senza titolo)",
+                "url": f"https://arxiv.org/abs/{identificativo}",
+                "voti": voti,
+                "segnalato": data,
+                "pubblicato": (paper.get("publishedAt") or "")[:10],
+                "organizzazione": organizzazione,
+                "repo": repo_codice,
+                "stelle_repo": paper.get("githubStars") or 0,
+                # Piu' lungo del taglio usato per le notizie: dei paper il
+                # sintetizzatore non deve dare notizia ma spiegare, e 400
+                # caratteri di abstract si fermano prima del risultato.
+                "estratto": ripulisci(paper.get("summary"), 1200),
+            }
+
+    if giorni_persi:
+        errori.append(
+            f"Hugging Face Daily Papers: {len(giorni_persi)} giorni su {GIORNI_FINESTRA} "
+            f"non raggiungibili ({', '.join(giorni_persi)})"
+        )
+
+    voci = [v for v in per_id.values() if v["voti"] >= PAPER_VOTI_MINIMI]
+    voci.sort(key=lambda v: v["voti"], reverse=True)
+    return voci[:MAX_PAPER_CANDIDATI]
+
+
 def raccogli_feed(
     nome: str,
     url: str,
@@ -359,6 +439,7 @@ def scrivi_materiale(
     percorso: str,
     repo: list[dict],
     notizie: list[dict],
+    paper: list[dict],
     scartate: int,
     errori: list[str],
     adesso: datetime,
@@ -368,7 +449,7 @@ def scrivi_materiale(
     righe.append("")
     righe.append(
         f"Finestra: dal {giorno(adesso - timedelta(days=GIORNI_FINESTRA))} al {giorno(adesso)}. "
-        f"Candidati: {len(repo)} repo, {len(notizie)} notizie. "
+        f"Candidati: {len(repo)} repo, {len(notizie)} notizie, {len(paper)} paper. "
         f"Voci gia' inviate in passato ed escluse a monte: {scartate}."
     )
     righe.append("")
@@ -418,6 +499,28 @@ def scrivi_materiale(
             righe.append(f"- Estratto: {voce['estratto']}")
         righe.append("")
 
+    righe.append(f"## Paper ({len(paper)})")
+    righe.append("")
+    if not paper:
+        righe.append("_Nessun candidato._")
+        righe.append("")
+    for indice, voce in enumerate(paper, 1):
+        righe.append(f"### P{indice}. {voce['titolo']}")
+        righe.append(f"- URL: {voce['url']}")
+        meta = f"{voce['voti']} voti · segnalato il {voce['segnalato']}"
+        if voce["pubblicato"] and voce["pubblicato"] != voce["segnalato"]:
+            meta += f" · su arXiv dal {voce['pubblicato']}"
+        righe.append(f"- Hugging Face Daily Papers: {meta}")
+        if voce["organizzazione"]:
+            righe.append(f"- Da: {voce['organizzazione']}")
+        if voce["repo"]:
+            righe.append(f"- Codice: {voce['repo']} ({numero(voce['stelle_repo'])} stelle)")
+        else:
+            righe.append("- Codice: nessuno collegato")
+        if voce["estratto"]:
+            righe.append(f"- Abstract: {voce['estratto']}")
+        righe.append("")
+
     with open(percorso, "w", encoding="utf-8") as f:
         f.write("\n".join(righe))
 
@@ -442,15 +545,18 @@ def main() -> int:
     for nome, url, escludi in FEED_RSS:
         notizie.extend(raccogli_feed(nome, url, adesso, errori, escludi))
 
+    paper = raccogli_paper(adesso, errori)
+
     # Lo storico delle stelle viene aggiornato per tutte le repo viste, anche
     # per quelle gia' inviate: serve a misurare la crescita, non a riproporle.
     gia_inviate = set(stato["inviati"])
-    totale_prima = len(repo) + len(notizie)
+    totale_prima = len(repo) + len(notizie) + len(paper)
     repo = [voce for voce in repo if voce["chiave"] not in gia_inviate]
     notizie = [voce for voce in notizie if voce["chiave"] not in gia_inviate]
-    scartate = totale_prima - len(repo) - len(notizie)
+    paper = [voce for voce in paper if voce["chiave"] not in gia_inviate]
+    scartate = totale_prima - len(repo) - len(notizie) - len(paper)
 
-    if not repo and not notizie:
+    if not repo and not notizie and not paper:
         if errori:
             print("nessun candidato e tutte le fonti in errore:", file=sys.stderr)
             for errore in errori:
@@ -458,13 +564,13 @@ def main() -> int:
             return 1
         print("attenzione: nessun candidato nuovo questa settimana", file=sys.stderr)
 
-    scrivi_materiale(argomenti.out, repo, notizie, scartate, errori, adesso)
+    scrivi_materiale(argomenti.out, repo, notizie, paper, scartate, errori, adesso)
 
     with open(argomenti.candidati, "w", encoding="utf-8") as f:
         json.dump(
             [
                 {"chiave": v["chiave"], "tipo": v["tipo"], "titolo": v["titolo"], "url": v["url"]}
-                for v in repo + notizie
+                for v in repo + notizie + paper
             ],
             f,
             indent=2,
@@ -476,7 +582,10 @@ def main() -> int:
     pota_stato(stato, adesso)
     salva_stato(argomenti.stato, stato)
 
-    print(f"raccolti {len(repo)} repo e {len(notizie)} notizie ({scartate} gia' inviate, escluse)")
+    print(
+        f"raccolti {len(repo)} repo, {len(notizie)} notizie e {len(paper)} paper "
+        f"({scartate} gia' inviate, escluse)"
+    )
     for errore in errori:
         print(f"  fonte in errore: {errore}", file=sys.stderr)
     return 0

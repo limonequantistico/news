@@ -9,6 +9,15 @@ Il vincolo che tiene in piedi il progetto non e' tecnico: **massimo dieci voci,
 e "questa settimana niente" e' un output legittimo.** Un'email puntuale con
 venti link diventa in tre settimane una mail che archivio senza aprire.
 
+In fondo, **in prova dal 18 settembre 2026**, c'e' una terza sezione: due o tre
+paper della settimana, non segnalati ma spiegati in quattro righe — cosa hanno
+fatto e perche' potrebbe contare per chi scrive software invece di addestrare
+modelli. Stanno fuori dal tetto delle dieci voci, quindi non tolgono posto a
+niente, ed e' l'unico punto in cui la mail puo' allungarsi. E' una prova con una
+scadenza: si decide se tenerla dopo quattro numeri, il **19 ottobre 2026**,
+guardando quanti di quei paper sono stati davvero aperti — vedi *La prova dei
+paper* in [algoritmo.md](algoritmo.md).
+
 ## Come funziona
 
 Tre pezzi separati, tre file di scambio. Nessun pezzo sa cosa fanno gli altri.
@@ -39,6 +48,13 @@ vedi **[algoritmo.md](algoritmo.md)**.
   settimana prima — dal secondo giro in poi e' il vero delta.
 - **Hacker News**, API di ricerca ufficiale: storie della settimana sopra i 150
   punti.
+- **Hugging Face Daily Papers**, API ufficiale, una chiamata per ogni giorno
+  della finestra: i paper segnalati sopra i 50 voti, ~25 candidati a settimana.
+  Non e' arXiv. arXiv grezzo pubblica circa duemila paper a settimana sulle sole
+  cs.AI, cs.LG e cs.CL: senza un segnale di attenzione gia' formato, il
+  sintetizzatore sceglierebbe a caso tra i titoli. I voti fanno qui lo stesso
+  lavoro dei punti di Hacker News. La lista esce solo nei feriali: sabato e
+  domenica l'API risponde vuota, ed e' normale.
 - **RSS**: TechCrunch, The Verge, AI Hero. Per togliere una testata, cancella
   la sua riga in `FEED_RSS` dentro `raccogli.py`.
 - **AI Hero** e' l'eccezione: non e' una testata di notizie ma il blog di Matt
