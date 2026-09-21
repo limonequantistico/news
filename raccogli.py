@@ -92,6 +92,17 @@ MAX_SNAPSHOT_PER_REPO = 10
 GIORNI_OBLIO_REPO = 120
 GIORNI_OBLIO_INVIATI = 400
 
+# Le repo con la tua stella sono gia' note: escono dai candidati a monte, come
+# quelle gia' inviate. L'utente e' il proprietario del repo (Actions lo passa in
+# GITHUB_REPOSITORY_OWNER); STELLE_DI lo sovrascrive, utile nei giri a mano.
+MAX_PAGINE_STELLATE = 30
+
+# Quanto indietro guarda l'elenco degli argomenti gia' trattati che finisce in
+# fondo a materiale.md. Il filtro sulle chiavi copre lo stesso link; questo serve
+# al sintetizzatore per riconoscere lo stesso argomento arrivato da un'altra
+# fonte (la notizia del lancio ad agosto, la repo a settembre).
+GIORNI_ARGOMENTI_TRATTATI = 180
+
 USER_AGENT = "news-settimanale/1.0 (+https://github.com)"
 
 # --------------------------------------------------------------------------
@@ -223,6 +234,34 @@ def cerca_github(query: str, token: str | None) -> list[dict]:
     if token:
         headers["Authorization"] = f"Bearer {token}"
     return scarica_json(url, headers).get("items", [])
+
+
+def raccogli_stellate(token: str | None, errori: list[str]) -> set[str]:
+    """Nomi (in minuscolo) delle repo a cui l'utente ha messo la stella.
+
+    L'elenco delle stelle di un utente e' pubblico: basta il GITHUB_TOKEN del
+    workflow. Se non c'e' un utente o l'API non risponde il giro continua senza
+    questo filtro, e il buco finisce in cima al materiale come le fonti cadute."""
+    utente = os.environ.get("STELLE_DI") or os.environ.get("GITHUB_REPOSITORY_OWNER")
+    if not utente:
+        print("attenzione: nessun utente per le stelle (STELLE_DI), filtro saltato", file=sys.stderr)
+        return set()
+
+    headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    nomi: set[str] = set()
+    for pagina in range(1, MAX_PAGINE_STELLATE + 1):
+        url = f"https://api.github.com/users/{quote(utente)}/starred?per_page=100&page={pagina}"
+        try:
+            elenco = scarica_json(url, headers)
+        except (RuntimeError, ValueError) as errore:
+            errori.append(f"Stelle di {utente} (repo gia' note non escluse): {errore}")
+            return set()
+        if not elenco:
+            break
+        nomi.update(repo["full_name"].lower() for repo in elenco)
+    return nomi
 
 
 def raccogli_repo(stato: dict, adesso: datetime, errori: list[str]) -> list[dict]:
@@ -435,12 +474,22 @@ def raccogli_feed(
 # --------------------------------------------------------------------------
 
 
+def argomenti_trattati(stato: dict, adesso: datetime) -> list[dict]:
+    """Voci gia' inviate negli ultimi GIORNI_ARGOMENTI_TRATTATI, dalla piu' recente."""
+    limite = giorno(adesso - timedelta(days=GIORNI_ARGOMENTI_TRATTATI))
+    voci = [v for v in stato["inviati"].values() if v.get("data", "")[:10] >= limite]
+    voci.sort(key=lambda v: v.get("data", ""), reverse=True)
+    return voci
+
+
 def scrivi_materiale(
     percorso: str,
     repo: list[dict],
     notizie: list[dict],
     paper: list[dict],
     scartate: int,
+    stellate: int,
+    trattati: list[dict],
     errori: list[str],
     adesso: datetime,
 ) -> None:
@@ -450,7 +499,8 @@ def scrivi_materiale(
     righe.append(
         f"Finestra: dal {giorno(adesso - timedelta(days=GIORNI_FINESTRA))} al {giorno(adesso)}. "
         f"Candidati: {len(repo)} repo, {len(notizie)} notizie, {len(paper)} paper. "
-        f"Voci gia' inviate in passato ed escluse a monte: {scartate}."
+        f"Voci gia' inviate in passato ed escluse a monte: {scartate}. "
+        f"Repo con la stella del lettore, gia' note ed escluse a monte: {stellate}."
     )
     righe.append("")
     if errori:
@@ -521,6 +571,17 @@ def scrivi_materiale(
             righe.append(f"- Abstract: {voce['estratto']}")
         righe.append("")
 
+    righe.append(f"## Gia' trattati nelle mail precedenti ({len(trattati)})")
+    righe.append("")
+    righe.append(
+        "Non sono candidati: e' cio' che il lettore ha gia' ricevuto negli ultimi "
+        f"{GIORNI_ARGOMENTI_TRATTATI} giorni, dalla mail piu' recente."
+    )
+    righe.append("")
+    for voce in trattati:
+        righe.append(f"- {voce.get('data', '')[:10]} · {voce.get('titolo', '')} · {voce.get('url', '')}")
+    righe.append("")
+
     with open(percorso, "w", encoding="utf-8") as f:
         f.write("\n".join(righe))
 
@@ -540,6 +601,9 @@ def main() -> int:
     errori: list[str] = []
 
     repo = raccogli_repo(stato, adesso, errori)
+    stellate_note = raccogli_stellate(
+        os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN"), errori
+    )
 
     notizie = raccogli_hacker_news(adesso, errori)
     for nome, url, escludi in FEED_RSS:
@@ -556,6 +620,11 @@ def main() -> int:
     paper = [voce for voce in paper if voce["chiave"] not in gia_inviate]
     scartate = totale_prima - len(repo) - len(notizie) - len(paper)
 
+    # Dopo il filtro sugli inviati, cosi' i due conteggi non si sovrappongono.
+    prima_delle_stelle = len(repo)
+    repo = [voce for voce in repo if voce["titolo"].lower() not in stellate_note]
+    stellate = prima_delle_stelle - len(repo)
+
     if not repo and not notizie and not paper:
         if errori:
             print("nessun candidato e tutte le fonti in errore:", file=sys.stderr)
@@ -564,7 +633,17 @@ def main() -> int:
             return 1
         print("attenzione: nessun candidato nuovo questa settimana", file=sys.stderr)
 
-    scrivi_materiale(argomenti.out, repo, notizie, paper, scartate, errori, adesso)
+    scrivi_materiale(
+        argomenti.out,
+        repo,
+        notizie,
+        paper,
+        scartate,
+        stellate,
+        argomenti_trattati(stato, adesso),
+        errori,
+        adesso,
+    )
 
     with open(argomenti.candidati, "w", encoding="utf-8") as f:
         json.dump(
@@ -584,7 +663,7 @@ def main() -> int:
 
     print(
         f"raccolti {len(repo)} repo, {len(notizie)} notizie e {len(paper)} paper "
-        f"({scartate} gia' inviate, escluse)"
+        f"({scartate} gia' inviate e {stellate} gia' stellate, escluse)"
     )
     for errore in errori:
         print(f"  fonte in errore: {errore}", file=sys.stderr)

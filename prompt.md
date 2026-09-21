@@ -78,6 +78,24 @@ stessa domanda di tutto il resto — se salta questa riga, si perde qualcosa di
 utile? — guardando pero' a cosa insegnano, non a cosa e' successo. Se una voce e'
 la presentazione di un corso o di un workshop invece di una tecnica, scartala.
 
+Una nota sugli **argomenti gia' trattati**. In fondo al materiale c'e' l'elenco
+di cio' che il lettore ha gia' ricevuto nelle mail precedenti. Lo stesso link e'
+gia' escluso a monte; tu devi riconoscere **lo stesso argomento arrivato da
+un'altra parte**: la notizia di un lancio uscita due mesi fa e ora la repo dello
+stesso progetto, un rilascio gia' segnalato e ora il post che lo commenta.
+Quelle voci scartale. Fa eccezione solo un fatto nuovo e concreto (la preview
+diventata versione stabile, un cambio di licenza, un rilascio importante): in
+quel caso la voce lo dice esplicitamente, per esempio "dopo la preview di
+agosto, ora…", e non presenta la cosa come nuova.
+
+Una nota sulle **repo grandi che crescono poco**. Una repo di mesi, con decine
+di migliaia di stelle e una crescita settimanale minima rispetto alla sua
+dimensione, non si sta muovendo: e' li' perche' e' grande, non perche' e'
+successo qualcosa. Prendila solo se questa settimana non c'e' niente di piu'
+recente che regga il criterio, e solo se e' davvero utile a chi scrive software.
+Le repo a cui il lettore ha gia' messo la stella sono gia' escluse a monte:
+quelle che vedi non le conosce.
+
 ## Vincoli rigidi
 
 1. **Massimo 10 voci tra Repo e Notizie**, massimo 5 per sezione — piu'

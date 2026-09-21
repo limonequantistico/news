@@ -73,6 +73,12 @@ vedi **[algoritmo.md](algoritmo.md)**.
   ripresenta. Solo le voci il cui link compare davvero nella sintesi.
 - `stelle` — storico degli snapshot, serve a calcolare la crescita.
 
+Oltre agli inviati, la raccolta toglie a monte le repo a cui hai messo la
+stella su GitHub (le conosci gia'), e in fondo a `materiale.md` elenca cio' che
+e' uscito negli ultimi sei mesi, cosi' il sintetizzatore puo' scartare lo
+stesso argomento arrivato da un'altra fonte. Dettagli in
+[algoritmo.md](algoritmo.md).
+
 Le voci raccolte e **non** scelte non finiscono in `inviati`: restano
 candidate e possono uscire piu' avanti. Ogni giro archivia sia il materiale
 grezzo sia la sintesi in `archivio/AAAA-MM-GG/`, quindi si puo' sempre vedere

@@ -144,6 +144,31 @@ non lo vede proprio: non deve ricordarsi niente, non puo' riproporlo per sbaglio
 Lo storico delle stelle viene aggiornato anche per le repo gia' inviate — servono
 a misurare la crescita, non a essere riproposte.
 
+Con lo stesso meccanismo escono anche **le repo a cui hai messo la stella** su
+GitHub: se l'hai stellata la conosci gia', e segnalartela e' conoscenza
+duplicata. L'elenco si legge dall'API pubblica delle stelle del proprietario del
+repo (`GITHUB_REPOSITORY_OWNER` in Actions, `STELLE_DI` per sovrascriverlo). Se
+l'API non risponde il giro continua senza questo filtro e il buco finisce in cima
+al materiale, come una fonte caduta. Nato il 21 settembre 2026, quando sono
+uscite `chenglou/pretext` (stellata ad aprile) e `deepseek-ai/deepseek-harness`
+(stellata la sera stessa della mail che ne annunciava il lancio).
+
+### Lo stesso argomento da un'altra fonte
+
+Il filtro qui sopra confronta **chiavi**, cioe' link: `hn:49285244` e
+`github:deepseek-ai/deepseek-harness` sono due chiavi diverse anche se parlano
+della stessa cosa. E' successo davvero: il 14 agosto e' uscita la notizia della
+preview di DeepSeek Harness da Hacker News, e il 21 settembre la repo, presentata
+come "nuovo harness".
+
+Riconoscere che due voci parlano della stessa cosa non si fa bene con il codice
+(nomi diversi, domini diversi) ed e' esattamente il lavoro in cui il
+sintetizzatore e' bravo. Quindi in fondo a `materiale.md` c'e' la sezione **Gia'
+trattati nelle mail precedenti** — data, titolo e link di cio' che e' uscito negli
+ultimi 180 giorni (`GIORNI_ARGOMENTI_TRATTATI`) — e il prompt dice di scartare le
+voci sullo stesso argomento, salvo un fatto nuovo concreto, che allora va detto
+esplicitamente ("dopo la preview di agosto, ora…").
+
 ---
 
 ## Imbuto 2 — cosa arriva nella mail
@@ -294,6 +319,8 @@ Tutto quello che decide la selezione sta in due file, in cima:
 | ampiezza della finestra | `GIORNI_FINESTRA` (7) |
 | quanti candidati per fonte | `MAX_REPO_PER_RICERCA` (50), `MAX_NOTIZIE_PER_FONTE` (25), `MAX_PAPER_CANDIDATI` (25) |
 | distanza minima tra due snapshot per calcolare la crescita | `GIORNI_MINIMI_CONFRONTO` (2) |
+| quanto indietro guarda l'elenco degli argomenti gia' trattati | `GIORNI_ARGOMENTI_TRATTATI` (180) |
+| di chi sono le stelle che escludono le repo gia' note | `STELLE_DI` (default: il proprietario del repo) |
 | **il criterio, i tetti, il tono** | `prompt.md` |
 
 I tetti — 10 voci tra repo e notizie, 5 per sezione, 3 paper fuori conto —
