@@ -25,6 +25,16 @@
       "titolo": "KeygraphHQ/shannon",
       "url": "https://github.com/KeygraphHQ/shannon"
     },
+    "github:Tencent/WeMM-Embedding": {
+      "data": "2026-09-21",
+      "titolo": "Tencent/WeMM-Embedding",
+      "url": "https://github.com/Tencent/WeMM-Embedding"
+    },
+    "github:anthropics/commerce-agents": {
+      "data": "2026-09-21",
+      "titolo": "anthropics/commerce-agents",
+      "url": "https://github.com/anthropics/commerce-agents"
+    },
     "github:anthropics/skills": {
       "data": "2026-08-24",
       "titolo": "anthropics/skills",
@@ -34,6 +44,11 @@
       "data": "2026-08-17",
       "titolo": "antirez/h3.c",
       "url": "https://github.com/antirez/h3.c"
+    },
+    "github:chenglou/pretext": {
+      "data": "2026-09-21",
+      "titolo": "chenglou/pretext",
+      "url": "https://github.com/chenglou/pretext"
     },
     "github:colbymchenry/codegraph": {
       "data": "2026-08-31",
@@ -49,6 +64,11 @@
       "data": "2026-09-14",
       "titolo": "deepseek-ai/DeepSelect",
       "url": "https://github.com/deepseek-ai/DeepSelect"
+    },
+    "github:deepseek-ai/deepseek-harness": {
+      "data": "2026-09-21",
+      "titolo": "deepseek-ai/deepseek-harness",
+      "url": "https://github.com/deepseek-ai/deepseek-harness"
     },
     "github:diegosouzapw/OmniRoute": {
       "data": "2026-09-07",
@@ -114,6 +134,11 @@
       "data": "2026-09-14",
       "titolo": "shadcn-ui/cn",
       "url": "https://github.com/shadcn-ui/cn"
+    },
+    "github:shadcn-ui/lint": {
+      "data": "2026-09-21",
+      "titolo": "shadcn-ui/lint",
+      "url": "https://github.com/shadcn-ui/lint"
     },
     "github:sqliteai/warp": {
       "data": "2026-08-17",
@@ -275,6 +300,41 @@
       "titolo": "OpenAI agents carried out an undisclosed attack on RubyGems",
       "url": "https://www.rubyhack.ai/"
     },
+    "hn:49701004": {
+      "data": "2026-09-21",
+      "titolo": "iOS 27, iPadOS 27, and macOS 27",
+      "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/"
+    },
+    "hn:49717558": {
+      "data": "2026-09-21",
+      "titolo": "Introducing System One Models and Jev",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    },
+    "hn:49724881": {
+      "data": "2026-09-21",
+      "titolo": "Nvidia announces native GPU programming in Rust",
+      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/"
+    },
+    "hn:49760187": {
+      "data": "2026-09-21",
+      "titolo": "Claude Code now reads AGENTS.md if there is no Claude.md",
+      "url": "https://code.claude.com/docs/en/changelog"
+    },
+    "paper:2609.05571": {
+      "data": "2026-09-21",
+      "titolo": "Grounded Skill Synthesis from Code at Scale for Agentic Intelligence",
+      "url": "https://arxiv.org/abs/2609.05571"
+    },
+    "paper:2609.20519": {
+      "data": "2026-09-21",
+      "titolo": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+      "url": "https://arxiv.org/abs/2609.20519"
+    },
+    "paper:2609.20804": {
+      "data": "2026-09-21",
+      "titolo": "An Empirical Study of Harness Design for Coding Agents",
+      "url": "https://arxiv.org/abs/2609.20804"
+    },
     "rss:https://techcrunch.com/?p=3153306": {
       "data": "2026-08-17",
       "titolo": "SpaceX officially closes its Cursor acquisition",
@@ -294,6 +354,11 @@
       "data": "2026-08-17",
       "titolo": "OpenAI reportedly disbanded its preparedness team",
       "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team"
+    },
+    "rss:https://www.theverge.com/?p=998078": {
+      "data": "2026-09-21",
+      "titolo": "Amazon doesn’t trust Meta’s Muse AI agent",
+      "url": "https://www.theverge.com/tech/998078/amazon-blocks-meta-muse-ai-agent-shopping"
     }
   },
   "stelle": {
@@ -329,6 +394,16 @@
       [
         "2026-09-07",
         71993
+      ],
+      [
+        "2026-09-21",
+        74196
+      ]
+    ],
+    "AbdelStark/awesome-typesafe": [
+      [
+        "2026-09-21",
+        414
       ]
     ],
     "Agenta-AI/awesome-ai-agent-platforms": [
@@ -345,6 +420,10 @@
       [
         "2026-09-14",
         2403
+      ],
+      [
+        "2026-09-21",
+        4142
       ]
     ],
     "Alishahryar1/free-claude-code": [
@@ -371,6 +450,10 @@
       [
         "2026-09-14",
         54857
+      ],
+      [
+        "2026-09-21",
+        55564
       ]
     ],
     "AminBlg/SimpleEnglish": [
@@ -485,6 +568,16 @@
       [
         "2026-08-14",
         72494
+      ],
+      [
+        "2026-09-21",
+        75421
+      ]
+    ],
+    "Continuum-AI-Corp/OrcaBonsai-27B-Uncensored": [
+      [
+        "2026-09-21",
+        509
       ]
     ],
     "CopilotKit/OpenBot": [
@@ -559,6 +652,10 @@
       [
         "2026-09-14",
         43176
+      ],
+      [
+        "2026-09-21",
+        43944
       ]
     ],
     "DhananjayBhosale/hilight-studio": [
@@ -583,6 +680,10 @@
       [
         "2026-09-14",
         1649
+      ],
+      [
+        "2026-09-21",
+        2033
       ]
     ],
     "Egonex-AI/Understand-Anything": [
@@ -621,12 +722,22 @@
       [
         "2026-09-14",
         1517
+      ],
+      [
+        "2026-09-21",
+        1725
       ]
     ],
     "EvoMap/AutoResearch": [
       [
         "2026-09-07",
         1683
+      ]
+    ],
+    "FSECDEV/Threat-Intelligence-Hackers-Forums": [
+      [
+        "2026-09-21",
+        378
       ]
     ],
     "Faizpi/bank-sampah": [
@@ -653,6 +764,12 @@
       [
         "2026-09-14",
         1272
+      ]
+    ],
+    "FjordWorkerShanty/Microsoft-Activation-Script": [
+      [
+        "2026-09-21",
+        1586
       ]
     ],
     "Foadsf/vintage-latex": [
@@ -709,12 +826,20 @@
       [
         "2026-09-14",
         116570
+      ],
+      [
+        "2026-09-21",
+        120033
       ]
     ],
     "HEJustinSun/my-girlfriend-jingtian-latex": [
       [
         "2026-08-31",
         4178
+      ],
+      [
+        "2026-09-21",
+        4207
       ]
     ],
     "HKUDS/CLI-Anything": [
@@ -755,12 +880,22 @@
       [
         "2026-09-14",
         48140
+      ],
+      [
+        "2026-09-21",
+        48446
       ]
     ],
     "HRuiCcc/music-geshizhuanhuan": [
       [
         "2026-08-31",
         217
+      ]
+    ],
+    "Haleclipse/CometixCode": [
+      [
+        "2026-09-21",
+        435
       ]
     ],
     "HammingDev/haiming-app-monetization": [
@@ -815,6 +950,10 @@
       [
         "2026-09-14",
         1365
+      ],
+      [
+        "2026-09-21",
+        3841
       ]
     ],
     "Imbad0202/academic-research-skills": [
@@ -841,6 +980,10 @@
       [
         "2026-09-14",
         47978
+      ],
+      [
+        "2026-09-21",
+        48953
       ]
     ],
     "Jakubantalik/thinking-orbs": [
@@ -851,6 +994,12 @@
       [
         "2026-08-17",
         2495
+      ]
+    ],
+    "JamesKInner/Covalent-MAS": [
+      [
+        "2026-09-21",
+        331
       ]
     ],
     "Jarvis322/macos-sysdata": [
@@ -889,6 +1038,10 @@
       [
         "2026-09-14",
         105469
+      ],
+      [
+        "2026-09-21",
+        107074
       ]
     ],
     "K-Dense-AI/scientific-agent-skills": [
@@ -903,6 +1056,10 @@
       [
         "2026-09-14",
         44846
+      ],
+      [
+        "2026-09-21",
+        45869
       ]
     ],
     "KJGX66F/usque-custom-pro": [
@@ -959,6 +1116,10 @@
       [
         "2026-09-14",
         47989
+      ],
+      [
+        "2026-09-21",
+        48242
       ]
     ],
     "Kritt-ai/open-kritt": [
@@ -1007,6 +1168,10 @@
       [
         "2026-08-24",
         79772
+      ],
+      [
+        "2026-09-21",
+        88907
       ]
     ],
     "Leonxlnx/unlazy": [
@@ -1023,6 +1188,12 @@
       [
         "2026-08-17",
         1159
+      ]
+    ],
+    "Lumid-Off/AirCard-Windows": [
+      [
+        "2026-09-21",
+        392
       ]
     ],
     "LunarXuan/image-prompt-reverse": [
@@ -1065,6 +1236,22 @@
       [
         "2026-09-14",
         42518
+      ],
+      [
+        "2026-09-21",
+        43515
+      ]
+    ],
+    "Mak5er/AirCard": [
+      [
+        "2026-09-21",
+        901
+      ]
+    ],
+    "Mantitup-Org/vista": [
+      [
+        "2026-09-21",
+        2376
       ]
     ],
     "MemPalace/mempalace": [
@@ -1091,6 +1278,10 @@
       [
         "2026-09-14",
         59043
+      ],
+      [
+        "2026-09-21",
+        59191
       ]
     ],
     "MengTo/sylva": [
@@ -1217,6 +1408,10 @@
       [
         "2026-09-14",
         1825
+      ],
+      [
+        "2026-09-21",
+        2762
       ]
     ],
     "Nanako0129/sepia": [
@@ -1231,6 +1426,16 @@
       [
         "2026-09-14",
         2591
+      ],
+      [
+        "2026-09-21",
+        2733
+      ]
+    ],
+    "NandhaKishorM/laya": [
+      [
+        "2026-09-21",
+        6790
       ]
     ],
     "NanmiCoder/dsh-agent-teams": [
@@ -1285,6 +1490,10 @@
       [
         "2026-09-07",
         78530
+      ],
+      [
+        "2026-09-21",
+        84120
       ]
     ],
     "PentagonConure42/youtube-downloader-zen": [
@@ -1303,6 +1512,12 @@
       [
         "2026-09-14",
         303
+      ]
+    ],
+    "Player-YN/BrowserKitten": [
+      [
+        "2026-09-21",
+        2906
       ]
     ],
     "Player-YN/PawWork_ZhuaZhua": [
@@ -1369,6 +1584,10 @@
       [
         "2026-09-14",
         2144
+      ],
+      [
+        "2026-09-21",
+        2474
       ]
     ],
     "S1N6H/pentest-harness": [
@@ -1395,6 +1614,12 @@
       [
         "2026-09-07",
         1881
+      ]
+    ],
+    "Sac-Y/Jev-cu": [
+      [
+        "2026-09-21",
+        519
       ]
     ],
     "ShadowAqueduct/watermark-remover": [
@@ -1441,6 +1666,12 @@
         1955
       ]
     ],
+    "SonicloudTech/sonicloud_opensdk": [
+      [
+        "2026-09-21",
+        2048
+      ]
+    ],
     "SpaceDudem/text-humanizer": [
       [
         "2026-09-14",
@@ -1467,6 +1698,22 @@
       [
         "2026-09-14",
         1574
+      ],
+      [
+        "2026-09-21",
+        1644
+      ]
+    ],
+    "TheoLeeCJ/SemIf": [
+      [
+        "2026-09-21",
+        2765
+      ]
+    ],
+    "TianyuCodings/NanoJev": [
+      [
+        "2026-09-21",
+        1674
       ]
     ],
     "VaderChen/YourDesk": [
@@ -1479,6 +1726,10 @@
       [
         "2026-09-14",
         1252
+      ],
+      [
+        "2026-09-21",
+        1904
       ]
     ],
     "Vincentwei1021/video-shotcraft": [
@@ -1489,6 +1740,12 @@
       [
         "2026-08-17",
         5251
+      ]
+    ],
+    "VoltAgent/awesome-design-md": [
+      [
+        "2026-09-21",
+        116963
       ]
     ],
     "VoltAgent/awesome-openclaw-skills": [
@@ -1515,6 +1772,10 @@
       [
         "2026-09-14",
         52561
+      ],
+      [
+        "2026-09-21",
+        52700
       ]
     ],
     "Wei-Shaw/sub2api": [
@@ -1539,6 +1800,10 @@
       [
         "2026-09-14",
         4264
+      ],
+      [
+        "2026-09-21",
+        5765
       ]
     ],
     "Yeachan-Heo/oh-my-claudecode": [
@@ -1557,6 +1822,10 @@
       [
         "2026-09-14",
         41402
+      ],
+      [
+        "2026-09-21",
+        43660
       ]
     ],
     "ZSeven-W/dsh-ios": [
@@ -1609,6 +1878,10 @@
       [
         "2026-09-14",
         65024
+      ],
+      [
+        "2026-09-21",
+        65409
       ]
     ],
     "Zyrexnn/Cybermes": [
@@ -1671,6 +1944,10 @@
       [
         "2026-09-14",
         94186
+      ],
+      [
+        "2026-09-21",
+        97953
       ]
     ],
     "adnanakil/nobuzz": [
@@ -1709,6 +1986,10 @@
       [
         "2026-09-14",
         258010
+      ],
+      [
+        "2026-09-21",
+        264259
       ]
     ],
     "ahujasid/camera-to-blender": [
@@ -1769,6 +2050,10 @@
       [
         "2026-09-14",
         1901
+      ],
+      [
+        "2026-09-21",
+        2191
       ]
     ],
     "andrewyng/openworker": [
@@ -1795,6 +2080,10 @@
       [
         "2026-09-14",
         2831
+      ],
+      [
+        "2026-09-21",
+        3007
       ]
     ],
     "anthropics/fermats-last-theorem": [
@@ -1871,6 +2160,12 @@
         24142
       ]
     ],
+    "apple/xcode-project-format": [
+      [
+        "2026-09-21",
+        407
+      ]
+    ],
     "arvids-unavailable/openGym": [
       [
         "2026-08-24",
@@ -1879,6 +2174,12 @@
       [
         "2026-08-31",
         6367
+      ]
+    ],
+    "arvindear/wp2shell-PoC": [
+      [
+        "2026-09-21",
+        563
       ]
     ],
     "asen-goat-mine/boujoy-harness": [
@@ -1895,6 +2196,10 @@
       [
         "2026-09-14",
         3397
+      ],
+      [
+        "2026-09-21",
+        3731
       ]
     ],
     "awesome-dsh-plugin/awesome-dsh-plugin": [
@@ -1915,10 +2220,20 @@
         14741
       ]
     ],
+    "awlevin/typesafe-computer-use": [
+      [
+        "2026-09-21",
+        694
+      ]
+    ],
     "ayghri/i-have-adhd": [
       [
         "2026-09-14",
         44877
+      ],
+      [
+        "2026-09-21",
+        49519
       ]
     ],
     "b-nnett/grok-bot-0.18-reconstructed": [
@@ -1933,6 +2248,10 @@
       [
         "2026-09-14",
         3500
+      ],
+      [
+        "2026-09-21",
+        3512
       ]
     ],
     "babygoton/WorkDaddy": [
@@ -1959,6 +2278,12 @@
       [
         "2026-08-24",
         6279
+      ]
+    ],
+    "bespokelabsai/nimble": [
+      [
+        "2026-09-21",
+        1366
       ]
     ],
     "biusberline/cloudflare-turnstile-solver": [
@@ -2003,6 +2328,12 @@
       [
         "2026-08-31",
         442
+      ]
+    ],
+    "browser-use/jev-ultrafast": [
+      [
+        "2026-09-21",
+        13880
       ]
     ],
     "browser-use/life-recorder": [
@@ -2067,6 +2398,10 @@
       [
         "2026-09-14",
         71541
+      ],
+      [
+        "2026-09-21",
+        72302
       ]
     ],
     "carnot-tech/consulting-pptx-skill": [
@@ -2083,6 +2418,10 @@
       [
         "2026-09-14",
         1374
+      ],
+      [
+        "2026-09-21",
+        1641
       ]
     ],
     "ccch1mneyyy/dsh-TUI": [
@@ -2117,6 +2456,10 @@
       [
         "2026-09-14",
         50336
+      ],
+      [
+        "2026-09-21",
+        50430
       ]
     ],
     "chrisgreg/boop": [
@@ -2165,6 +2508,10 @@
       [
         "2026-09-14",
         69029
+      ],
+      [
+        "2026-09-21",
+        69243
       ]
     ],
     "codejunkie99/fable-orchestrator": [
@@ -2189,6 +2536,10 @@
       [
         "2026-09-14",
         70769
+      ],
+      [
+        "2026-09-21",
+        71672
       ]
     ],
     "cordiverse/paper": [
@@ -2237,6 +2588,16 @@
       [
         "2026-09-14",
         3962
+      ],
+      [
+        "2026-09-21",
+        4478
+      ]
+    ],
+    "dabit3/jev-experiments": [
+      [
+        "2026-09-21",
+        352
       ]
     ],
     "damejan80/tokentab": [
@@ -2249,6 +2610,10 @@
       [
         "2026-09-07",
         812
+      ],
+      [
+        "2026-09-21",
+        1545
       ]
     ],
     "dataelement/dsh-desktop": [
@@ -2325,12 +2690,22 @@
       [
         "2026-09-14",
         223328
+      ],
+      [
+        "2026-09-21",
+        231873
       ]
     ],
     "deepseek-ai/deepseek-recipe": [
       [
         "2026-09-14",
         326
+      ]
+    ],
+    "devagrawal09/jev-review": [
+      [
+        "2026-09-21",
+        439
       ]
     ],
     "diegosouzapw/OmniRoute": [
@@ -2357,6 +2732,10 @@
       [
         "2026-09-14",
         65898
+      ],
+      [
+        "2026-09-21",
+        68739
       ]
     ],
     "digimata/quill": [
@@ -2393,6 +2772,12 @@
         4145
       ]
     ],
+    "dofastted/vm2api": [
+      [
+        "2026-09-21",
+        535
+      ]
+    ],
     "donvito/codex-astra-luna-orchestrator": [
       [
         "2026-09-07",
@@ -2407,6 +2792,12 @@
       [
         "2026-09-07",
         302
+      ]
+    ],
+    "droidrun/mobile-jev": [
+      [
+        "2026-09-21",
+        305
       ]
     ],
     "drumih/turbo-fieldfare": [
@@ -2477,6 +2868,12 @@
         2053
       ]
     ],
+    "eternity4719/HowToLiveBetter": [
+      [
+        "2026-09-21",
+        10114
+      ]
+    ],
     "eternityspring/reelbench-skills": [
       [
         "2026-09-14",
@@ -2493,16 +2890,34 @@
         2467
       ]
     ],
+    "ethanplusai/astra-flash-orchestrator": [
+      [
+        "2026-09-21",
+        322
+      ]
+    ],
     "evangelosvlachos96-dotcom/booking-microservices": [
       [
         "2026-09-07",
         240
       ]
     ],
+    "featherless-ai/simple-jev": [
+      [
+        "2026-09-21",
+        429
+      ]
+    ],
     "feitangyuan/motion-web": [
       [
         "2026-09-14",
         220
+      ]
+    ],
+    "fhshaik/typesafe-mario": [
+      [
+        "2026-09-21",
+        315
       ]
     ],
     "firecrawl/anydoc": [
@@ -2581,6 +2996,10 @@
       [
         "2026-09-14",
         132938
+      ],
+      [
+        "2026-09-21",
+        133825
       ]
     ],
     "gazijarin/itsgiving": [
@@ -2625,6 +3044,12 @@
         129601
       ]
     ],
+    "githubnext/localjev": [
+      [
+        "2026-09-21",
+        662
+      ]
+    ],
     "guillaumemeyer/watermarks-remover": [
       [
         "2026-08-14",
@@ -2667,6 +3092,12 @@
         2539
       ]
     ],
+    "gylive/ccodex-sleep-state": [
+      [
+        "2026-09-21",
+        537
+      ]
+    ],
     "hairyf/deepseek-harness-desktop": [
       [
         "2026-08-17",
@@ -2697,6 +3128,10 @@
       [
         "2026-09-14",
         72004
+      ],
+      [
+        "2026-09-21",
+        73338
       ]
     ],
     "henryzawadzki6542/cloudflare-turnstile-bypass": [
@@ -2729,6 +3164,10 @@
       [
         "2026-09-14",
         49825
+      ],
+      [
+        "2026-09-21",
+        52070
       ]
     ],
     "hkqr/my-free-code": [
@@ -2761,6 +3200,10 @@
       [
         "2026-09-14",
         54232
+      ],
+      [
+        "2026-09-21",
+        55710
       ]
     ],
     "iAmCorey/Wake": [
@@ -2789,10 +3232,28 @@
         330
       ]
     ],
+    "incoai/splash": [
+      [
+        "2026-09-21",
+        509
+      ]
+    ],
     "jamiepine/voicebox": [
       [
         "2026-08-14",
         50416
+      ]
+    ],
+    "jaredpalmer/kev": [
+      [
+        "2026-09-21",
+        1555
+      ]
+    ],
+    "jarrodwatts/jev-trader": [
+      [
+        "2026-09-21",
+        1677
       ]
     ],
     "jaskirat1616/mactap-app": [
@@ -2845,6 +3306,10 @@
       [
         "2026-09-14",
         1698
+      ],
+      [
+        "2026-09-21",
+        3068
       ]
     ],
     "kacperkapusciak/goldie": [
@@ -2855,6 +3320,10 @@
       [
         "2026-09-14",
         2047
+      ],
+      [
+        "2026-09-21",
+        2138
       ]
     ],
     "kajisho5/ffmpeg-skill": [
@@ -2867,6 +3336,16 @@
       [
         "2026-09-14",
         48295
+      ],
+      [
+        "2026-09-21",
+        48681
+      ]
+    ],
+    "kerpopule/hermes-jev-skills": [
+      [
+        "2026-09-21",
+        337
       ]
     ],
     "kevinzakka/mjbatch": [
@@ -2911,6 +3390,16 @@
       [
         "2026-09-14",
         86235
+      ],
+      [
+        "2026-09-21",
+        87123
+      ]
+    ],
+    "korcarc/text-humanizer": [
+      [
+        "2026-09-21",
+        738
       ]
     ],
     "kruzovic7/ai-data-extractor": [
@@ -2939,6 +3428,12 @@
       [
         "2026-09-07",
         331
+      ]
+    ],
+    "kyotofin/tax-doc-classifier": [
+      [
+        "2026-09-21",
+        314
       ]
     ],
     "lanicer/cve-2026-41940-PoC": [
@@ -2985,6 +3480,10 @@
       [
         "2026-09-14",
         6673
+      ],
+      [
+        "2026-09-21",
+        7872
       ]
     ],
     "localai-org/kimodo.cpp": [
@@ -3039,6 +3538,16 @@
       [
         "2026-09-07",
         255646
+      ],
+      [
+        "2026-09-21",
+        266784
+      ]
+    ],
+    "mcncarl/jianying-headless": [
+      [
+        "2026-09-21",
+        2228
       ]
     ],
     "microsoft/skill-recorder": [
@@ -3073,6 +3582,18 @@
       [
         "2026-08-24",
         614
+      ]
+    ],
+    "mizorewww/laya-coreml": [
+      [
+        "2026-09-21",
+        573
+      ]
+    ],
+    "mizorewww/laya-mlx": [
+      [
+        "2026-09-21",
+        2361
       ]
     ],
     "mizzlelover/gongwen-gbt9704-skill": [
@@ -3115,6 +3636,10 @@
       [
         "2026-09-14",
         152217
+      ],
+      [
+        "2026-09-21",
+        153855
       ]
     ],
     "multica-ai/multica": [
@@ -3141,6 +3666,10 @@
       [
         "2026-09-14",
         49785
+      ],
+      [
+        "2026-09-21",
+        50978
       ]
     ],
     "mvanhorn/last30days-skill": [
@@ -3167,6 +3696,10 @@
       [
         "2026-09-14",
         61996
+      ],
+      [
+        "2026-09-21",
+        62506
       ]
     ],
     "myYangyunfan/dsh_desktop": [
@@ -3207,6 +3740,12 @@
         287
       ]
     ],
+    "newliver666/apk-reverse": [
+      [
+        "2026-09-21",
+        520
+      ]
+    ],
     "nextlevelbuilder/ui-ux-pro-max-skill": [
       [
         "2026-08-14",
@@ -3231,6 +3770,10 @@
       [
         "2026-09-14",
         127492
+      ],
+      [
+        "2026-09-21",
+        129456
       ]
     ],
     "nexu-io/open-design": [
@@ -3257,6 +3800,10 @@
       [
         "2026-09-14",
         96064
+      ],
+      [
+        "2026-09-21",
+        97388
       ]
     ],
     "nftechie/stonkfly": [
@@ -3307,6 +3854,10 @@
       [
         "2026-09-14",
         286427
+      ],
+      [
+        "2026-09-21",
+        289498
       ]
     ],
     "odysseus-dev/odysseus": [
@@ -3333,6 +3884,10 @@
       [
         "2026-09-14",
         87215
+      ],
+      [
+        "2026-09-21",
+        87443
       ]
     ],
     "oil-oil/oil-motion": [
@@ -3363,6 +3918,10 @@
       [
         "2026-09-14",
         2022
+      ],
+      [
+        "2026-09-21",
+        2224
       ]
     ],
     "omdsh-dev/DSH-better-sidebar": [
@@ -3407,6 +3966,10 @@
       [
         "2026-09-14",
         1871
+      ],
+      [
+        "2026-09-21",
+        1971
       ]
     ],
     "openclaw/openclaw": [
@@ -3433,6 +3996,16 @@
       [
         "2026-09-14",
         389649
+      ],
+      [
+        "2026-09-21",
+        390182
+      ]
+    ],
+    "pallavi-shekhar/ai-engineering-interview-questions-company-wise": [
+      [
+        "2026-09-21",
+        582
       ]
     ],
     "paperclipai/paperclip": [
@@ -3459,6 +4032,10 @@
       [
         "2026-09-14",
         80644
+      ],
+      [
+        "2026-09-21",
+        81165
       ]
     ],
     "pathwaycom/arc-task-gen": [
@@ -3503,6 +4080,10 @@
       [
         "2026-09-14",
         67917
+      ],
+      [
+        "2026-09-21",
+        69495
       ]
     ],
     "pemarine/cve-2026-41940-PoC": [
@@ -3527,6 +4108,12 @@
         2270
       ]
     ],
+    "qingjian-team/qingjian": [
+      [
+        "2026-09-21",
+        1554
+      ]
+    ],
     "rakanki911/DLSS5-Swapper": [
       [
         "2026-09-07",
@@ -3535,12 +4122,28 @@
       [
         "2026-09-14",
         4381
+      ],
+      [
+        "2026-09-21",
+        6134
       ]
     ],
     "rizqinrr/viserys-agent": [
       [
         "2026-09-14",
         632
+      ]
+    ],
+    "rmalde/minecraft-agent": [
+      [
+        "2026-09-21",
+        396
+      ]
+    ],
+    "robbietilton/Compositor": [
+      [
+        "2026-09-21",
+        4023
       ]
     ],
     "robbyant-research/Zero-WAM": [
@@ -3591,6 +4194,10 @@
       [
         "2026-09-14",
         80267
+      ],
+      [
+        "2026-09-21",
+        81225
       ]
     ],
     "s0lness/awesome-esp32": [
@@ -3659,6 +4266,16 @@
       [
         "2026-09-14",
         6713
+      ],
+      [
+        "2026-09-21",
+        6468
+      ]
+    ],
+    "saragordic/window-sweaters": [
+      [
+        "2026-09-21",
+        642
       ]
     ],
     "saurabhkumar8112/cyclomatic-complexity-skill": [
@@ -3671,6 +4288,10 @@
       [
         "2026-09-14",
         2562
+      ],
+      [
+        "2026-09-21",
+        3691
       ]
     ],
     "sebbbi/NoGraphicsAPI": [
@@ -3695,6 +4316,16 @@
       [
         "2026-09-14",
         1464
+      ],
+      [
+        "2026-09-21",
+        1558
+      ]
+    ],
+    "shadcn-ui/lint": [
+      [
+        "2026-09-21",
+        2248
       ]
     ],
     "shanraisshan/claude-code-best-practice": [
@@ -3721,6 +4352,10 @@
       [
         "2026-09-14",
         65908
+      ],
+      [
+        "2026-09-21",
+        66153
       ]
     ],
     "sickn33/agentic-awesome-skills": [
@@ -3747,6 +4382,10 @@
       [
         "2026-09-14",
         46386
+      ],
+      [
+        "2026-09-21",
+        46684
       ]
     ],
     "slvDev/esp32-ai": [
@@ -3837,6 +4476,10 @@
       [
         "2026-09-14",
         68255
+      ],
+      [
+        "2026-09-21",
+        74140
       ]
     ],
     "stanuwu/Sunrise": [
@@ -3849,6 +4492,18 @@
       [
         "2026-09-14",
         822
+      ]
+    ],
+    "superagents-lab/jev-search": [
+      [
+        "2026-09-21",
+        352
+      ]
+    ],
+    "tamaratran/fast-jev-compaction": [
+      [
+        "2026-09-21",
+        5743
       ]
     ],
     "tandpfun/wardrobe": [
@@ -3895,10 +4550,22 @@
         91635
       ]
     ],
+    "theoephraim/awesome-cloudflare-selfhosted": [
+      [
+        "2026-09-21",
+        752
+      ]
+    ],
     "thisisgm/flea": [
       [
         "2026-09-07",
         337
+      ]
+    ],
+    "thruwire/foreman": [
+      [
+        "2026-09-21",
+        447
       ]
     ],
     "tigerless-labs/agent-memory": [
@@ -3937,6 +4604,10 @@
       [
         "2026-09-14",
         2493
+      ],
+      [
+        "2026-09-21",
+        2541
       ]
     ],
     "totec448-spec/chat-on-steroids": [
@@ -3991,6 +4662,10 @@
       [
         "2026-09-14",
         61538
+      ],
+      [
+        "2026-09-21",
+        68721
       ]
     ],
     "tw93/Mole": [
@@ -4017,6 +4692,10 @@
       [
         "2026-09-14",
         67101
+      ],
+      [
+        "2026-09-21",
+        67971
       ]
     ],
     "ultraworkers/claw-code": [
@@ -4025,10 +4704,22 @@
         195070
       ]
     ],
+    "unicodef1wn/grokbot-field-notes": [
+      [
+        "2026-09-21",
+        446
+      ]
+    ],
     "unstablebuild/rune": [
       [
         "2026-09-14",
         492
+      ]
+    ],
+    "v-modal/awesome-jev-tools": [
+      [
+        "2026-09-21",
+        599
       ]
     ],
     "vercel-labs/agent-browser": [
@@ -4095,6 +4786,12 @@
         228
       ]
     ],
+    "vinnylarouge/jevlike": [
+      [
+        "2026-09-21",
+        1134
+      ]
+    ],
     "vinzdg/codenotch": [
       [
         "2026-09-07",
@@ -4103,6 +4800,10 @@
       [
         "2026-09-14",
         1557
+      ],
+      [
+        "2026-09-21",
+        2133
       ]
     ],
     "vvxw/deploy-vercel": [
@@ -4137,6 +4838,12 @@
         3689
       ]
     ],
+    "wfzyx/von": [
+      [
+        "2026-09-21",
+        298
+      ]
+    ],
     "what1f/kitter": [
       [
         "2026-09-07",
@@ -4151,6 +4858,10 @@
       [
         "2026-09-14",
         1507
+      ],
+      [
+        "2026-09-21",
+        3478
       ]
     ],
     "worldwonderer/oh-story-dsh": [
@@ -4259,6 +4970,10 @@
       [
         "2026-09-14",
         1718
+      ],
+      [
+        "2026-09-21",
+        2752
       ]
     ],
     "yanliudesign/mono-color-skill": [
@@ -4313,6 +5028,16 @@
       [
         "2026-09-14",
         276
+      ],
+      [
+        "2026-09-21",
+        1826
+      ]
+    ],
+    "yibie/awesome-jev": [
+      [
+        "2026-09-21",
+        808
       ]
     ],
     "yifanzhang-pro/recurrent-looped-tranformer": [
@@ -4367,6 +5092,18 @@
       [
         "2026-09-14",
         260
+      ]
+    ],
+    "yynxxxxx/gpt_sub_analysis": [
+      [
+        "2026-09-21",
+        575
+      ]
+    ],
+    "zai-org/ZCode": [
+      [
+        "2026-09-21",
+        4757
       ]
     ],
     "zenbu-labs/terminal-code": [
@@ -4424,6 +5161,6 @@
       ]
     ]
   },
-  "ultimo_invio": "2026-09-14T10:23:28+00:00",
-  "ultimo_run": "2026-09-14T10:20:47+00:00"
+  "ultimo_invio": "2026-09-21T10:28:09+00:00",
+  "ultimo_run": "2026-09-21T10:25:15+00:00"
 }
